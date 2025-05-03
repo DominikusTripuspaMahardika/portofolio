@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link
+            href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <title>Portofolio Digital - Responsif</title>
+
+        <!-- Di dalam <head> -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+            rel="stylesheet">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+            rel="stylesheet">
+
+        <link rel="icon" href="assets/img/about.png" type="image/png">
+
+        <meta name="description"
+            content="Portofolio Full-Stack Web Developer - Dominikus Tripuspa Mahardika">
+        <meta name="keywords"
+            content="HTML, CSS, JavaScript, PHP, MySQL, Full Stack, Web Developer">
+        <meta property="og:title"
+            content="Portofolio Dominikus Tripuspa Mahardika">
+        <meta property="og:description"
+            content="Full-Stack Web Developer | PHP, MySQL, JS">
+        <meta property="og:image" content="assets/img/about.png">
+        <meta property="og:url"
+            content="https://github.com/DominikusTripuspaMahardika/">
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div id="preloader">
+            <div class="preloader__content">
+                <div class="preloader__circle-container">
+                    <svg class="preloader__svg" viewBox="0 0 100 100">
+                        <!-- Lingkaran luar (berdenyut) -->
+                        <circle class="preloader__circle pulse-ring" cx="50"
+                            cy="50" r="42" />
+                        <!-- Lingkaran dalam (berputar) -->
+                        <circle class="preloader__circle spin-ring" cx="50"
+                            cy="50" r="35" />
+                    </svg>
+                    <img src="assets/img/about.png"
+                        alt="Foto Dominikus Tripuspa Mahardika"
+                        class="preloader__img">
+                </div>
+                <p class="preloader__text">Memuat Portofolio...</p>
+            </div>
+        </div>
+        <!-- Pemutar Musik -->
+        <audio id="bg-music" src="assets/audio/bg_audio.mp3" loop></audio>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="home.html" class="nav__logo">Dominikus Tripuspa
+                        Mahardika</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <!-- Mobile Only Photo and Title -->
+                    <div class="mobile-only nav__profile">
+                        <img src="assets/img/profile.png"
+                            alt="Dominikus Tripuspa Mahardika"
+                            class="nav__photo">
+                        <h3 class="nav__name">Dominikus Tripuspa Mahardika</h3>
+                    </div><br>
+                    <ul class="nav__list">
+                        <!--<li class="nav__item"><a href="#home"
+                                class="nav__link active-link">Home</a></li>-->
+                        <li class="nav__item"><a href="#about"
+                                class="nav__link">About</a></li>
+                        <!-- Work Group -->
+                        <li class="nav__item dropdown">
+                            <span class="nav__link dropdown-toggle">Work</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="#skills"
+                                        class="nav__link">Skills</a></li><br>
+                                <li><a href="#projects"
+                                        class="nav__link">Projects</a></li><br>
+                                <!--<li><a href="#testimonials" class="nav__link">Testimonials</a></li><br>-->
+                                <li><a href="#experience"
+                                        class="nav__link">Experience</a></li>
+                            </ul>
+                        </li>
+                        <!-- Learning Group -->
+                        <li class="nav__item dropdown">
+                            <span
+                                class="nav__link dropdown-toggle">Learning</span>
+                            <ul class="dropdown-menu">
+                                <li><a href="#certificate"
+                                        class="nav__link">Certificate</a></li><br>
+                                <li><a href="#education"
+                                        class="nav__link">Education</a></li><br>
+                                <!--<li><a href="#sastra"
+                                        class="nav__link">Novel</a></li><br>-->
+                                <li><a href="#planning"
+                                        class="nav__link">Planning</a></li><br>
+                                <li><a href="#vision"
+                                        class="nav__link">Vision</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item"><a href="#contact"
+                                class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a
+                                href="assets/file/CV_DominikusTM.pdf"
+                                class="nav__link" download target="_blank"
+                                rel="noopener noreferrer">Download CV</a></li>
+                        <!-- Tombol Musik Khusus Mobile -->
+                        <li class="nav__item mobile-only">
+                            <button id="music-toggle" class="music-btn">🔈
+                                Nyalakan Musik</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+        <!-- Pencarian pintar -->
+        <div class="nav__search">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search..." class="search-input">
+                <button type="button" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div id="search-suggestions" class="search-suggestions">
+                    <!-- Rekomendasi akan muncul di sini -->
+                </div>
+            </div>
+        </div>
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Saya <span
+                            class="home__title-color">Dominikus</span><br>Full-Stack
+                        Web Dev
+                    </h1>
+                    <div class="clock" id="clock-label">⏰ Memuat
+                        waktu...</div><br>
+                    <a
+                        href="https://wa.me/6285706800428?text=Halo%2C%20selamat%20pagi%20Bapak%2FIbu.%0ATerima%20kasih%20telah%20mengirimkan%20lamaran%20kerja%20kepada%20kami.%0AKami%20ingin%20menginformasikan%20bahwa%20CV%20Anda%20telah%20kami%20terima%20dan%20sedang%20dalam%20proses%20seleksi.%0AKami%20akan%20menghubungi%20kembali%20jika%20Anda%20terpilih%20untuk%20tahap%20selanjutnya.%0A%0AJika%20ada%20pertanyaan%2C%20silakan%20balas%20pesan%20ini.%0A%0ATerima%20kasih%20dan%20semoga%20harimu%20menyenangkan."
+                        target="_blank"
+                        class="button"
+                        style="display: inline-block; text-align: center; text-decoration: none;">
+                        Send Message
+                    </a>
+                </div>
+
+                <div class="home__social">
+                    <a
+                        href="https://www.youtube.com/channel/UCnlvfhUF0ucjcHVeuxudRsg/"
+                        class="home__social-icon"><i
+                            class='bx bxl-youtube'></i></a>
+                    <a href="https://wa.me/6285706800428/"
+                        class="home__social-icon"><i
+                            class='bx bxl-whatsapp'></i></a>
+                    <a href="https://github.com/DominikusTripuspaMahardika/"
+                        class="home__social-icon"><i
+                            class='bx bxl-github'></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path
+                                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path
+                                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                            <image class="home__blob-img" x="50" y="110"
+                                href="assets/img/about.png"
+                                alt="Foto profil Dominikus Tripuspa Mahardika" />
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">My About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/profile.png"
+                            alt="Foto profil Dominikus Tripuspa Mahardika">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">Saya Dominikus Tripuspa
+                            Mahardika</h2>
+                        <p class="about__text">Lulusan SMKN 11 Malang program
+                            keahlian Rekayasa Perangkat Lunak dengan minat
+                            yang kuat dalam
+                            pengembangan aplikasi web berbasis server-side
+                            rendering. Memiliki penguasaan terhadap teknologi
+                            web
+                            seperti HTML, CSS, JavaScript, PHP (termasuk PHP
+                            Native), MySQL, XAMPP, GitHub, dan Bootstrap.
+                            Teliti, disiplin,
+                            serta mampu bekerja secara efektif baik secara
+                            individu maupun dalam tim. Memiliki tujuan
+                            profesional untuk
+                            berkontribusi sebagai Full-Stack Web Developer di
+                            perusahaan teknologi yang mendukung inovasi
+                            dan
+                            pengembangan solusi digital berbasis aplikasi web
+                            yang andal dan berkelanjutan.</p>
+                        <!--<div class="about__info">
+                            <p class="about__text"><i
+                                    class="fas fa-birthday-cake"></i>
+                                <strong>Umur:</strong> <span
+                                    id="umur-dinamis"></span> tahun</p>
+                            <p class="about__text"><i
+                                    class="fas fa-ruler-vertical"></i>
+                                <strong>Tinggi Badan:</strong> 170 cm</p>
+                            <p class="about__text"><i class="fas fa-weight"></i>
+                                <strong>Berat Badan:</strong> 60 kg</p>
+                            <p class="about__text"><i
+                                    class="fas fa-map-marker-alt"></i>
+                                <strong>Alamat:</strong> Jl. Klayatan III No.45
+                                RT 06 RW 13, Sukun, Kota Malang, Jawa Timur</p>
+                            <p class="about__text"><i class="fas fa-heart"></i>
+                                <strong>Hobi:</strong> Membuat proyek web,
+                                membaca literatur teknologi, mendengarkan musik,
+                                menonton anime, membaca wattpad, eksperimen
+                                memasak, dan eksperimen proyek web.</p>
+                        </div>-->
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">My Skills</h2>
+
+                <div class="skills__container bd-grid">
+                    <div>
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <p class="skills__text">
+                            Saya memiliki fondasi yang kuat dalam teknologi
+                            front-end dan back-end (Dasar), dengan fokus pada
+                            membangun aplikasi web yang responsif, ramah
+                            pengguna, dan dapat diskalakan. Saya terus berusaha
+                            untuk meningkatkan keterampilan saya dan tetap
+                            up-to-date dengan tren perkembangan terbaru.
+                        </p>
+
+                        <!-- Accordion Section -->
+                        <div class="accordion">
+                            <div class="accordion__item" data-aos="fade-down"
+                                data-aos-delay="100">
+                                <button class="accordion__header">
+                                    <span><i class='bx bx-code-alt'
+                                            style="margin-right: 8px;"></i>
+                                        Keterampilan Teknis</span>
+                                    <i
+                                        class='bx bx-chevron-down accordion__icon'></i>
+                                </button>
+                                <div class="accordion__body">
+                                    <ul
+                                        style="padding-left: 1.2rem; margin: 0;">
+                                        <li><strong>HTML5:</strong> Struktur
+                                            semantik yang baik dan bersih</li>
+                                        <li><strong>CSS3:</strong> Styling
+                                            responsif dan modern</li>
+                                        <li><strong>PHP (Native):</strong>
+                                            Logika backend dan integrasi dengan
+                                            database</li>
+                                        <li><strong>MySQL:</strong> Perancangan
+                                            dan pengelolaan basis data</li>
+                                        <li><strong>Bootstrap:</strong>
+                                            Framework CSS untuk UI
+                                            responsif</li>
+                                        <li><strong>GitHub:</strong> Kolaborasi
+                                            proyek dan version control</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item" data-aos="fade-down"
+                                data-aos-delay="150">
+                                <button class="accordion__header">
+                                    <span><i class='bx bx-briefcase-alt-2'
+                                            style="margin-right: 8px;"></i>
+                                        Keterampilan Tempat Kerja</span>
+                                    <i
+                                        class='bx bx-chevron-down accordion__icon'></i>
+                                </button>
+                                <div class="accordion__body">
+                                    <ul
+                                        style="padding-left: 0; list-style: none; margin: 0;">
+                                        <li><i class='bx bx-time'
+                                                style="color: #007bff; margin-right: 8px;"></i>
+                                            <strong>Manajemen Waktu:</strong>
+                                            Menyelesaikan tugas secara
+                                            terorganisir dan tepat waktu.</li>
+                                        <li><i class='bx bx-bulb'
+                                                style="color: #007bff; margin-right: 8px;"></i>
+                                            <strong>Pemecahan Masalah:</strong>
+                                            Analitis dan cepat tanggap dalam
+                                            menyelesaikan tantangan kerja.</li>
+                                        <li><i class='bx bx-microphone'
+                                                style="color: #007bff; margin-right: 8px;"></i>
+                                            <strong>Public Speaking:</strong>
+                                            Komunikasi efektif di berbagai
+                                            situasi formal maupun informal.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item" data-aos="fade-down"
+                                data-aos-delay="200">
+                                <button class="accordion__header">
+                                    <span><i class='bx bx-user-check'
+                                            style="margin-right: 8px;"></i>
+                                        Ciri-ciri Tim/Individu</span>
+                                    <i
+                                        class='bx bx-chevron-down accordion__icon'></i>
+                                </button>
+                                <div class="accordion__body">
+                                    <ul
+                                        style="padding-left: 0; list-style: none; margin: 0;">
+                                        <li><i class='bx bx-refresh'
+                                                style="color: #007bff; margin-right: 8px;"></i>
+                                            <strong>Adaptif:</strong> Siap
+                                            menghadapi perubahan dan tantangan
+                                            baru dengan cepat.</li>
+                                        <li><i class='bx bx-rocket'
+                                                style="color: #007bff; margin-right: 8px;"></i>
+                                            <strong>Inisiatif:</strong> Tidak
+                                            menunggu instruksi untuk
+                                            berkontribusi secara aktif.</li>
+                                        <li><i class='bx bx-brain'
+                                                style="color: #007bff; margin-right: 8px;"></i>
+                                            <strong>Growth Mindset:</strong>
+                                            Selalu belajar dan berkembang dari
+                                            pengalaman.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skill Progress Bars -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html"></div>
+                            <div><span
+                                    class="skills__percentage">95%</span></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css"></div>
+                            <div><span
+                                    class="skills__percentage">85%</span></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon'></i>
+                                <span class="skills__name">JavaScript</span>
+                            </div>
+                            <div class="skills__bar skills__js"></div>
+                            <div><span
+                                    class="skills__percentage">65%</span></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-paint skills__icon'></i>
+                                <span class="skills__name">UX/UI</span>
+                            </div>
+                            <div class="skills__bar skills__ux"></div>
+                            <div><span
+                                    class="skills__percentage">85%</span></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="assets/img/work.jpg" alt class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects section" id="projects">
+                <h2 class="section-title">My Projects</h2>
+
+                <!-- Filter Buttons -->
+                <div class="project__filters">
+                    <button class="filter-btn active"
+                        data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="html">HTML</button>
+                    <button class="filter-btn" data-filter="css">CSS</button>
+                    <button class="filter-btn"
+                        data-filter="js">JavaScript</button>
+                    <button class="filter-btn" data-filter="php">PHP</button>
+                    <button class="filter-btn"
+                        data-filter="mysql">MySQL</button>
+                </div>
+
+                <!-- Project Items -->
+                <div class="projects__container bd-grid">
+                    <!-- Semua project__item kamu yang sudah diformat rapi (seperti di atas) diletakkan di sini -->
+                    <!-- Contoh satu item -->
+                    <div class="project__item"
+                        data-category="html css js php mysql">
+                        <h3 class="project__title">1. Aplikasi Pengaduan
+                            Masyarakat</h3>
+                        <img src="assets/img/pengaduanmasyarakat.jpg" alt
+                            class="project__img">
+                        <p><strong>Fitur:</strong> Upload gambar keluhan, input
+                            deskripsi, penyimpanan data ke MySQL</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JS, PHP, MySQL,
+                            XAMPP</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/pengaduan_masyarakat"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Aplikasi berbasis web
+                            yang dirancang untuk memfasilitasi proses
+                            penyampaian keluhan dari masyarakat secara online.
+                            Sistem ini mendukung autentikasi multi-user, serta
+                            menyediakan fitur manajemen data pengaduan, desa,
+                            dan pengguna.</p>
+                    </div>
+
+                    <div class="project__item"
+                        data-category="html css js php mysql"
+                        data-aos="fade-down" data-aos-delay="100">
+                        <h3 class="project__title">2. Aplikasi Galeri Foto</h3>
+                        <img src="assets/img/galerifoto.jpg" alt
+                            class="project__img">
+                        <p><strong>Fitur:</strong> Upload gambar, fitur like,
+                            komentar, kategori foto</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JS, PHP, MySQL,
+                            XAMPP</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/galeri_foto"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Aplikasi galeri foto
+                            berbasis web yang dirancang untuk memberikan
+                            kemudahan bagi pengguna dalam mengunggah, mengelola,
+                            dan menyimpan foto secara daring. Sistem ini
+                            dilengkapi dengan fitur autentikasi multi-user untuk
+                            mendukung peran dan hak akses yang berbeda, serta
+                            manajemen pengguna guna menjaga integritas dan
+                            keamanan data. Selain itu, aplikasi ini juga
+                            menyediakan fitur interaktif seperti sistem
+                            penyematan tanda suka (like) dan kolom komentar guna
+                            meningkatkan keterlibatan pengguna dalam ekosistem
+                            galeri.</p>
+                    </div>
+
+                    <div class="project__item hidden-project"
+                        data-category="html css js" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="project__title">3. Aplikasi Klinik</h3>
+                        <img src="assets/img/klinik.jpg" alt
+                            class="project__img">
+                        <p><strong>Fitur:</strong> Informasi Dokter, Jadwal
+                            Janji Temu, Testimoni Pasien</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JS</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/clinic"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Aplikasi Klinik berbasis
+                            web yang dirancang untuk memfasilitasi penyediaan
+                            informasi layanan kesehatan secara interaktif.
+                            Pengguna dapat melihat daftar dokter yang tersedia,
+                            membuat janji temu secara daring, serta membaca
+                            testimoni dari pasien lain untuk membangun
+                            kepercayaan terhadap layanan klinik. Aplikasi ini
+                            menggunakan teknologi front-end modern dan responsif
+                            agar dapat diakses dengan optimal melalui berbagai
+                            perangkat.</p>
+                    </div>
+
+                    <div class="project__item hidden-project"
+                        data-category="html css js" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="project__title">4. Aplikasi EdgeCut</h3>
+                        <img src="assets/img/edgecut.jpg" alt
+                            class="project__img">
+                        <p><strong>Fitur:</strong> Katalog produk furnitur,
+                            Formulir kontak, Blog informasi terbaru</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JS</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/edgecut"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Aplikasi web katalog
+                            furnitur yang menampilkan berbagai produk secara
+                            interaktif. Pengguna dapat melihat detail produk,
+                            membaca artikel terbaru di blog, serta menghubungi
+                            penyedia melalui formulir kontak. Desain antarmuka
+                            yang responsif dan navigasi yang intuitif
+                            mempermudah pengguna dalam menjelajahi konten.</p>
+                    </div>
+
+                    <div class="project__item hidden-project"
+                        data-category="html css js" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="project__title">5. Aplikasi Mediplus</h3>
+                        <img src="assets/img/mediplus.jpg" alt
+                            class="project__img">
+                        <p><strong>Fitur:</strong> Direktori dokter, Formulir
+                            kontak, Artikel kesehatan</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JS</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/mediplus"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Platform informasi
+                            layanan kesehatan yang menyediakan direktori dokter,
+                            artikel edukatif, dan formulir kontak. Dirancang
+                            untuk memberikan kemudahan akses informasi kesehatan
+                            secara daring dengan antarmuka yang bersih dan
+                            user-friendly.</p>
+                    </div>
+
+                    <div class="project__item hidden-project"
+                        data-category="html css js" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="project__title">6. Aplikasi Makaan</h3>
+                        <img src="assets/img/makaan.jpg" alt
+                            class="project__img">
+                        <p><strong>Fitur:</strong> Daftar properti, Kategori
+                            properti, Informasi agen</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JS</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/makaan"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Aplikasi web listing
+                            properti yang memungkinkan pengguna menjelajahi
+                            berbagai jenis properti berdasarkan kategori dan
+                            lokasi. Dilengkapi informasi agen dan detail kontak
+                            untuk mempermudah proses komunikasi dan
+                            transaksi.</p>
+                    </div>
+
+                    <div class="project__item hidden-project"
+                        data-category="html css js" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="project__title">7. Aplikasi Skating Board
+                            S</h3>
+                        <img src="assets/img/skateboardschool.jpg" alt
+                            class="project__img">
+                        <p><strong>Fitur:</strong> Profil sekolah, Program
+                            pelatihan, Formulir kontak</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JS</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/skateboardschool"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Website informatif untuk
+                            sekolah skateboard yang menyajikan informasi tentang
+                            program pelatihan, profil institusi, serta fasilitas
+                            kontak langsung. Fokus pada penyampaian konten
+                            visual yang menarik dan aksesibilitas informasi.</p>
+                    </div>
+
+                    <div class="project__item hidden-project"
+                        data-category="html css js" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="project__title">8. Aplikasi Rent4u</h3>
+                        <img src="assets/img/rent4u.jpg"
+                            alt="Tampilan aplikasi Rent4u" class="project__img">
+                        <p><strong>Fitur:</strong> Halaman daftar mobil, artikel
+                            blog informatif, formulir kontak untuk komunikasi
+                            langsung.</p>
+                        <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
+                        <p><strong>Github:</strong> <a
+                                href="https://github.com/DominikusTripuspaMahardika/rent4u"
+                                target="_blank">Lihat Repository</a></p>
+                        <p><strong>Deskripsi:</strong> Rent4u adalah sebuah
+                            website informatif yang dirancang untuk
+                            memperkenalkan layanan penyewaan mobil. Aplikasi ini
+                            menyediakan informasi lengkap mengenai armada
+                            kendaraan, artikel blog yang mendukung pemasaran
+                            konten, serta fitur kontak untuk mempermudah
+                            komunikasi dengan pelanggan. Fokus utama website ini
+                            adalah pada penyampaian informasi yang visual,
+                            menarik, dan mudah diakses oleh pengguna.</p>
+                    </div>
+
+                    <div class="project__more-button">
+                        <button id="toggleProjects">Lihat Semua Proyek</button>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== TESTIMONIALS 
+        <section class="testimonials section" id="testimonials">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="swiper testimonials__container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial__item">
+                        <p class="testimonial__text">
+                            <i class="fas fa-quote-left testimonial__icon"></i>
+                            Dominikus menunjukkan kinerja luar biasa selama pengembangan website desa. Hasil kerjanya cepat, akurat, dan sesuai harapan kami.
+                        </p>
+                        <span class="testimonial__author">— Keisha Yunia Putri</span>
+                    </div>
+                    <div class="swiper-slide testimonial__item">
+                        <p class="testimonial__text">
+                            <i class="fas fa-quote-left testimonial__icon"></i>
+                            Proyek galeri foto yang dikembangkan Dominikus berjalan dengan sangat baik. Ia sangat komunikatif dan solutif.
+                        </p>
+                        <span class="testimonial__author">— Jessica Latasha Mauren</span>
+                    </div>
+                    <div class="swiper-slide testimonial__item">
+                        <p class="testimonial__text">
+                            <i class="fas fa-quote-left testimonial__icon"></i>
+                            Dominikus memiliki kemampuan coding yang solid dan mampu menyelesaikan tantangan teknis dengan baik dalam tim kami.
+                        </p>
+                        <span class="testimonial__author">— Audrey Yaza Deranda</span>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>=====-->
+
+            <!--===== EXPERIENCE =====-->
+            <section class="experience section" id="experience">
+                <h2 class="section-title">My Experience</h2>
+
+                <div class="experience__container bd-grid">
+                    <div class="experience__item" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="experience__role">Magang Digital Marketing -
+                            CV. Anugerah Makmur</h3>
+                        <p><strong>Periode:</strong> Januari 2024 – Juni
+                            2024</p>
+                        <p><strong>Alamat:</strong> Perum. Green Orchid Cluster
+                            Grade F-02, Mojolangu, Lowokwaru, Malang,
+                            Jawa Timur</p>
+                        <p><strong>Tugas:</strong> Bertanggung jawab dalam
+                            pembuatan konten digital yang relevan dan menarik
+                            untuk mendukung promosi produk, mengelola dan
+                            mengoptimalkan akun media sosial perusahaan secara
+                            konsisten, serta menyusun laporan analisis performa
+                            kampanye digital secara berkala untuk
+                            evaluasi strategi pemasaran.</p>
+                    </div>
+
+                    <div class="experience__item" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="experience__role">Waiter - Dapur Mama J&J
+                            Bubur Bakar</h3>
+                        <p><strong>Periode:</strong> Juni 2024 – September
+                            2024</p>
+                        <p><strong>Alamat:</strong> Jl. Siwalan No. 11A, Pisang
+                            Candi, Kec. Sukun, Kota Malang, Jawa Timur
+                        </p>
+                        <p><strong>Tugas:</strong> Bertanggung jawab dalam
+                            memberikan pelayanan pelanggan yang optimal,
+                            mencatat setiap pesanan secara akurat, menjaga
+                            kebersihan dan kerapian area kerja sesuai standar
+                            kebersihan yang ditetapkan, serta memberikan
+                            dukungan operasional kepada tim dapur dan bagian
+                            pencucian peralatan guna memastikan kelancaran
+                            proses pelayanan dan operasional harian.</p>
+                    </div>
+
+                    <div class="experience__item" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="experience__role">Cleaning Service - PT Maju
+                            Bersama Santoso</h3>
+                        <p><strong>Periode:</strong> Januari 2025 – April
+                            2025</p>
+                        <p><strong>Alamat:</strong> Jl. Masjid Bar. Gg. I No.71,
+                            Pagetan, Candirenggo, Kec. Singosari,
+                            Kabupaten Malang</p>
+                        <p><strong>Tugas:</strong> Melaksanakan tanggung jawab
+                            pemeliharaan kebersihan dan kerapian
+                            lingkungan kantor secara rutin, termasuk pembersihan
+                            area kerja, ruang publik, dan fasilitas
+                            umum. Memastikan seluruh fasilitas kantor tetap
+                            dalam kondisi layak pakai guna mendukung
+                            kenyamanan dan produktivitas kerja seluruh staf.</p>
+                    </div>
+
+                    <div class="experience__item" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="experience__role">Waiter - Seafood
+                            Muphus</h3>
+                        <p><strong>Periode:</strong> Oktober 2024 – Desember
+                            2024</p>
+                        <p><strong>Alamat:</strong> 3MX7+M6V, Pangetan,
+                            Pangetan, Kec. Singosari, Kabupaten Malang</p>
+                        <p><strong>Tugas:</strong> Memberikan pelayanan
+                            pelanggan yang ramah dan responsif, memastikan
+                            pencatatan serta penyajian pesanan secara akurat dan
+                            efisien, serta menjaga kebersihan dan
+                            kerapian area pelayanan untuk menciptakan pengalaman
+                            makan yang menyenangkan dan higienis.</p>
+                    </div>
+
+                    <div class="experience__item" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="experience__role">Cleaning Service - SSSpoon
+                            Well</h3>
+                        <p><strong>Periode:</strong> Januari 2025 – April
+                            2025</p>
+                        <p><strong>Alamat:</strong> Jl. Bromo No. 34, Oro-oro
+                            Dowo, Kec. Klojen, Kota Malang</p>
+                        <p><strong>Tugas:</strong> Melaksanakan tanggung jawab
+                            dalam menjaga kebersihan ruang kerja dan
+                            fasilitas umum secara konsisten, mendukung kegiatan
+                            logistik kebersihan seperti penyediaan dan
+                            pengelolaan peralatan, serta berkontribusi dalam
+                            operasional restoran termasuk pengantaran
+                            makanan kepada pelanggan dan bantuan dalam proses
+                            persiapan dapur.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="certificate section" id="certificate">
+                <h2 class="section-title">My Certifications</h2>
+                <div class="certificate__container">
+                    <div class="certificate__item" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="certificate__title">Sertifikat Kompetensi
+                            Keahlian</h3>
+                        <p><strong>Bidang:</strong> Rekayasa Perangkat Lunak</p>
+                        <p><strong>Penyelenggara:</strong> SMKN 11 Malang & PT
+                            WeSolve Solusi Indonesia</p>
+                        <p><strong>Tahun:</strong> 2024</p>
+                        <p><strong>Judul Proyek:</strong> Website Galeri
+                            Foto</p>
+                        <p><strong>Hasil:</strong> Dinyatakan Kompeten</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== EDUCATION =====-->
+            <section class="education section" id="education">
+                <h2 class="section-title">My Education</h2>
+
+                <div class="education__container bd-grid">
+                    <div class="education__item" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <div class="education__icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="education__title">SDN Bandungrejosari
+                                4</h3>
+                            <span class="education__period">2012 - 2018</span>
+                            <p class="education__address">Jl. Danuri No.18,
+                                Bandungrejosari, Kec. Sukun, Kota Malang</p>
+                        </div>
+                    </div>
+                    <div class="education__item" data-aos="fade-down"
+                        data-aos-delay="200">
+                        <div class="education__icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div>
+                            <h3 class="education__title">SMPK Mardi Wiyata</h3>
+                            <span class="education__period">2018 - 2021</span>
+                            <p class="education__address">Jl. Semeru No.34,
+                                Oro-Oro Dowo, Kec. Klojen, Kota Malang</p>
+                        </div>
+                    </div>
+                    <div class="education__item" data-aos="fade-down"
+                        data-aos-delay="300">
+                        <div class="education__icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div>
+                            <h3 class="education__title">SMKN 11 Malang -
+                                Rekayasa Perangkat Lunak</h3>
+                            <span class="education__period">2021 - 2024</span>
+                            <p class="education__address">Jl. Pelabuhan Bakahuni
+                                No.1, Bakalankrajan, Kec. Sukun, Kota
+                                Malang</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== FUTURE PLANNING =====-->
+            <section class="planning section" id="planning">
+                <h2 class="section-title">
+                    <i class='bx bx-briefcase-alt-2'
+                        style="color:#007bff; margin-right:8px;"></i>
+                    Menuju Profesionalisme
+                </h2>
+                <div class="planning__container bd-grid">
+                    <div class="planning__timeline">
+                        <div class="planning__item" data-aos="fade-down"
+                            data-aos-delay="100">
+                            <div class="planning__content">
+                                <h3><i class='bx bx-laptop'
+                                        style="color:#007bff; margin-right:6px;"></i>Freelance
+                                    Developer</h3>
+                                <p>Memulai karier secara mandiri dengan fokus
+                                    pada penyediaan solusi digital untuk klien
+                                    lokal dan internasional, melalui pendekatan
+                                    kerja yang fleksibel dan berbasis hasil.
+                                    <br>
+                                    <em>Launching an independent career by
+                                        delivering digital solutions to both
+                                        local and international clients through
+                                        a flexible, results-oriented
+                                        approach.</em></p>
+                            </div>
+                        </div>
+                        <div class="planning__item" data-aos="fade-down"
+                            data-aos-delay="200">
+                            <div class="planning__content">
+                                <h3><i class='bx bx-globe-alt'
+                                        style="color:#007bff; margin-right:6px;"></i>Remote
+                                    Collaboration</h3>
+                                <p>Berpartisipasi secara aktif dalam tim global
+                                    sebagai full-stack developer dengan
+                                    kemampuan beradaptasi terhadap berbagai
+                                    metodologi kerja jarak jauh dan lingkungan
+                                    lintas budaya. <br>
+                                    <em>Actively collaborating within global
+                                        teams as a full-stack developer, with
+                                        strong adaptability to diverse remote
+                                        workflows and cross-cultural
+                                        environments.</em></p>
+                            </div>
+                        </div>
+                        <div class="planning__item" data-aos="fade-down"
+                            data-aos-delay="300">
+                            <div class="planning__content">
+                                <h3><i class='bx bx-network-chart'
+                                        style="color:#007bff; margin-right:6px;"></i>Web
+                                    Agency Development</h3>
+                                <p>Membangun agensi digital independen yang
+                                    menyediakan layanan komprehensif, mencakup
+                                    perancangan UI/UX, pengembangan web, hingga
+                                    proses deployment berbasis standar industri.
+                                    <br>
+                                    <em>Establishing an independent digital
+                                        agency offering comprehensive services,
+                                        including UI/UX design, web development,
+                                        and industry-standard deployment
+                                        solutions.</em></p>
+                            </div>
+                        </div>
+                        <div class="planning__item" data-aos="fade-down"
+                            data-aos-delay="400">
+                            <div class="planning__content">
+                                <h3><i class='bx bx-certification'
+                                        style="color:#007bff; margin-right:6px;"></i>Professional
+                                    Development</h3>
+                                <p>Berkomitmen pada pengembangan kompetensi
+                                    melalui pembelajaran berkelanjutan,
+                                    pelatihan teknis mendalam, serta perolehan
+                                    sertifikasi profesional terkini yang relevan
+                                    dengan industri. <br>
+                                    <em>Committed to continuous skill
+                                        development through lifelong learning,
+                                        advanced technical training, and
+                                        acquisition of up-to-date
+                                        industry-relevant
+                                        certifications.</em></p>
+                            </div>
+                        </div>
+                        <div class="planning__item" data-aos="fade-down"
+                            data-aos-delay="500">
+                            <div class="planning__content">
+                                <h3><i class='bx bx-group'
+                                        style="color:#007bff; margin-right:6px;"></i>Strategic
+                                    Networking</h3>
+                                <p>Mengembangkan jaringan profesional yang
+                                    berkelanjutan dengan klien, mitra kreatif,
+                                    serta komunitas teknologi, guna membangun
+                                    kolaborasi strategis dan memperluas peluang
+                                    inovatif. <br>
+                                    <em>Developing sustainable professional
+                                        networks with clients, creative
+                                        partners, and the tech community to
+                                        foster strategic collaborations and
+                                        expand innovative
+                                        opportunities.</em></p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="planning__button">
+                            <i class='bx bx-conversation'
+                                style="margin-right: 6px;"></i>Diskusikan
+                            Kolaborasi
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SASTRA =====-->
+            <!--<section class="sastra section" id="sastra">
+                <div class="sastra__container">
+                    <h2 class="section-title">Cerita Novel</h2>
+                    <h3 class="sastra__title" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <i class='bx bx-book-heart'
+                            style="color:#007bff; margin-right: 8px;"></i>
+                        Penasaran Tentang Mu
+                    </h3>
+                    <p class="sastra__description" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <strong>“Penasaran Tentang Mu”</strong> adalah sebuah
+                        novel dramatis dan emosional yang menggambarkan
+                        perjalanan batin seorang perempuan bernama Jessica
+                        Latasha Mauren dalam mencari makna cinta sejati di
+                        antara luka masa lalu, ketidakpastian, dan harapan baru.
+                        Dengan latar suasana melankolis dan konflik batin yang
+                        intens, cerita ini mengajak pembaca menyelami perasaan
+                        yang rumit antara persahabatan, kehilangan, dan cinta
+                        yang tak terucap. Hadirnya tujuh tokoh dengan latar dan
+                        peran berbeda, seperti Aaron yang diam-diam menyimpan
+                        rasa, Brian yang selalu ada namun tak tergenggam, hingga
+                        Derren yang menjadi pelabuhan terakhir, menjadikan kisah
+                        ini penuh liku dan emosi. Sebuah kisah tentang
+                        keberanian untuk memilih, dan ketakutan untuk
+                        melepaskan.
+                    </p>
+                    <a
+                        href=""
+                        class="button button--flex" download>
+                        <i class='bx bx-download'
+                            style="margin-right: 8px;"></i>
+                        Unduh Cerita Lengkap
+                    </a>
+                </div><br>
+                <div class="sastra__container">
+                    <h3 class="sastra__title" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <i class='bx bx-book-heart'
+                            style="color:#007bff; margin-right: 8px;"></i>
+                        Aku Bagaikan Aranyani, di Kegelapan Malam
+                    </h3>
+                    <p class="sastra__description" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <strong>“Aku Bagaikan Aranyani, di Kegelapan
+                            Malam”</strong> adalah sebuah novel dramatis dan
+                        emosional yang menggambarkan perjalanan batin seorang
+                        perempuan bernama Camella Veronica Mauren dalam mencari
+                        makna jati diri dan cinta sejati di antara bayang-bayang
+                        masa lalu dan harapan yang rapuh. Dibalut suasana
+                        melankolis dan konflik batin yang mendalam, kisah ini
+                        membawa pembaca menyelami relung jiwa seorang wanita
+                        yang terluka namun tetap berani mencintai. Dikelilingi
+                        oleh tujuh tokoh dengan peran dan dinamika yang
+                        unik—Reagan yang selalu setia sebagai teman biasa,
+                        Trustin yang menjadi cahaya terdekat, Melvin sang mantan
+                        yang membawa luka lama, dan Zenith, pasangan yang penuh
+                        kesabaran—kisah ini mengalir layaknya tarian sunyi
+                        Aranyani di tengah hutan malam. Sebuah kisah tentang
+                        pencarian, pengampunan, dan keberanian untuk menjadi
+                        diri sendiri, bahkan ketika cinta datang dalam wujud
+                        yang tak terduga.
+                    </p>
+                    <a
+                        href=""
+                        class="button button--flex" download>
+                        <i class='bx bx-download'
+                            style="margin-right: 8px;"></i>
+                        Unduh Cerita Lengkap
+                    </a>
+                </div>
+            </section>-->
+
+            <!--===== VISI MISI MOTO =====-->
+            <section class="vision section" id="vision">
+                <h2 class="section-title">Visi, Misi & Moto</h2>
+                <div class="vision__container bd-grid">
+                    <!-- Visi -->
+                    <div class="vision__box" data-aos="fade-down"
+                        data-aos-delay="100">
+                        <h3 class="vision__subtitle">
+                            <i class='bx bx-target-lock'
+                                style="color:#007bff; margin-right: 8px;"></i>
+                            Visi
+                        </h3>
+                        <p class="vision__text">
+                            Menjadi Full-Stack Web Developer yang profesional,
+                            adaptif, dan inovatif dalam mengembangkan solusi
+                            digital yang unggul, bernilai strategis, serta
+                            memberikan kontribusi nyata bagi kemajuan masyarakat
+                            dan transformasi industri berbasis teknologi.
+                        </p>
+                    </div>
+
+                    <!-- Misi -->
+                    <div class="vision__box" data-aos="fade-down"
+                        data-aos-delay="150">
+                        <h3 class="vision__subtitle">
+                            <i class='bx bx-bullseye'
+                                style="color:#007bff; margin-right: 8px;"></i>
+                            Misi
+                        </h3>
+                        <ul class="vision__list">
+                            <li>✦ Meningkatkan kompetensi secara berkelanjutan
+                                melalui pembelajaran aktif dan adaptasi terhadap
+                                perkembangan teknologi terkini.</li>
+                            <li>✦ Merancang dan mengimplementasikan aplikasi web
+                                yang handal, efisien, serta berfokus pada
+                                pengalaman dan kebutuhan pengguna.</li>
+                            <li>✦ Membangun kolaborasi yang efektif dalam tim
+                                melalui komunikasi terbuka, saling menghargai,
+                                dan semangat sinergi.</li>
+                            <li>✦ Menjaga standar profesionalisme dan integritas
+                                kerja dalam setiap tahapan pengembangan solusi
+                                digital.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Moto -->
+                    <div class="vision__box" data-aos="fade-down"
+                        data-aos-delay="200">
+                        <h3 class="vision__subtitle">
+                            <i class='bx bx-rocket'
+                                style="color:#007bff; margin-right: 8px;"></i>
+                            Moto
+                        </h3>
+                        <p class="vision__text">
+                            <em>"Berkarya dengan Konsistensi, Bertumbuh melalui Inovasi Teknologi."</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">My Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action class="contact__form">
+                        <label data-aos="fade-down" for="name">Nama:</label>
+                        <input type="text" id="name" placeholder="Name"
+                            class="contact__input"
+                            value="Dominikus Tripuspa Mahardika" readonly>
+
+                        <label data-aos="fade-down" for="number">Nomor
+                            Telepon:</label>
+                        <input type="text" id="number" placeholder="Number"
+                            class="contact__input"
+                            value="+62 857-0680-0428" readonly>
+
+                        <label data-aos="fade-down" for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Email"
+                            class="contact__input"
+                            value="tripuspamahardika@gmail.com" readonly>
+
+                        <label data-aos="fade-down" for="alamat">Alamat:</label>
+                        <input type="text" id="alamat" placeholder="Alamat"
+                            class="contact__input"
+                            value="Jl. Klayatan III No.45 RT:06 RW:13, Sukun, Kota Malang, Jawa Timur"
+                            readonly>
+
+                        <label data-aos="fade-down" for="github">GitHub:</label>
+                        <input type="url" id="github" placeholder="GitHub"
+                            class="contact__input"
+                            value="https://github.com/DominikusTripuspaMahardika/"
+                            readonly>
+
+                        <label data-aos="fade-down"
+                            for="portofolio">Portofolio:</label>
+                        <input type="url" id="portofolio"
+                            placeholder="Portofolio" class="contact__input"
+                            value="https://dominikustripuspamahardika.github.io/portofolio/"
+                            readonly>
+
+                        <a
+                            href="https://wa.me/6285706800428?text=Halo%2C%20selamat%20pagi%20Bapak%2FIbu.%0ATerima%20kasih%20telah%20mengirimkan%20lamaran%20kerja%20kepada%20kami.%0AKami%20ingin%20menginformasikan%20bahwa%20CV%20Anda%20telah%20kami%20terima%20dan%20sedang%20dalam%20proses%20seleksi.%0AKami%20akan%20menghubungi%20kembali%20jika%20Anda%20terpilih%20untuk%20tahap%20selanjutnya.%0A%0AJika%20ada%20pertanyaan%2C%20silakan%20balas%20pesan%20ini.%0A%0ATerima%20kasih%20dan%20semoga%20harimu%20menyenangkan."
+                            target="_blank"
+                            class="contact__button contact__input button"
+                            style="display: inline-block; text-align: center; text-decoration: none;">
+                            <span>Chat with us on WhatsApp</span>
+                        </a>
+                    </form>
+
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Dominikus Tripuspa Mahardika</p>
+            <div class="footer__social">
+                <a
+                    href="https://www.youtube.com/channel/UCnlvfhUF0ucjcHVeuxudRsg/"
+                    class="footer__icon"><i
+                        class='bx bxl-youtube'></i></a>
+                <a href="https://wa.me/6285706800428/" class="footer__icon"><i
+                        class='bx bxl-whatsapp'></i></a>
+                <a href="https://github.com/DominikusTripuspaMahardika/"
+                    class="footer__icon"><i
+                        class='bx bxl-github'></i></a>
+            </div>
+            <p class="footer__copy">&#169;Portofolio Digital. All rights
+                reserved. <span
+                    id="year"></span></p>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+
+        <!-- Swiper JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Sebelum </body> -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+        <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+        <script>
+        document.querySelectorAll('.accordion__header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+        <script>
+        var swiper = new Swiper('.testimonials__container', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            spaceBetween: 30,
+            grabCursor: true,
+        });
+    </script>
+        <script>
+        const toggleBtn = document.getElementById('toggleProjects');
+        const hiddenProjects = Array.from(document.querySelectorAll('.hidden-project'));
+        let currentVisible = 0;
+        const itemsPerClick = 5;
+    
+        // Fungsi untuk tampilkan 5 proyek berikutnya
+        function showNextProjects() {
+            const nextVisible = currentVisible + itemsPerClick;
+            hiddenProjects.slice(currentVisible, nextVisible).forEach(item => {
+                item.style.display = 'block';
+            });
+            currentVisible = nextVisible;
+    
+            if (currentVisible >= hiddenProjects.length) {
+                toggleBtn.textContent = 'Sembunyikan Proyek';
+            }
+        }
+    
+        // Fungsi untuk sembunyikan semua proyek
+        function hideAllProjects() {
+            hiddenProjects.forEach(item => item.style.display = 'none');
+            currentVisible = 0;
+            toggleBtn.textContent = 'Lihat Semua Proyek';
+        }
+    
+        // Event saat tombol "Lihat Semua Proyek" diklik
+        toggleBtn.addEventListener('click', () => {
+            if (currentVisible >= hiddenProjects.length) {
+                hideAllProjects();
+            } else {
+                showNextProjects();
+            }
+        });
+    
+        // Fungsi filter berdasarkan kategori
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project__item');
+    
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Hapus class aktif dari semua tombol
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+    
+                const filter = button.getAttribute('data-filter');
+    
+                // Sembunyikan semua proyek lalu tampilkan sesuai filter
+                projectItems.forEach(item => {
+                    const categories = item.getAttribute('data-category').split(' ');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+    
+                // Reset tampilan proyek tersembunyi setelah filter berubah
+                hiddenProjects.forEach(item => item.style.display = 'none');
+                currentVisible = 0;
+                toggleBtn.textContent = 'Lihat Semua Proyek';
+            });
+        });
+    
+        // Inisialisasi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', hideAllProjects);
+    </script>
+        <script>
+        // Hanya aktifkan dropdown toggle jika di desktop
+        function handleDropdownToggle() {
+            if (window.innerWidth >= 768) {
+                document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                    toggle.onclick = function (e) {
+                        e.preventDefault();
+                        const parent = this.parentElement;
+    
+                        document.querySelectorAll('.dropdown').forEach(item => {
+                            if (item !== parent) item.classList.remove('active');
+                        });
+    
+                        parent.classList.toggle('active');
+                    };
+                });
+    
+                document.addEventListener('click', function (e) {
+                    const isDropdown = e.target.closest('.dropdown');
+                    if (!isDropdown) {
+                        document.querySelectorAll('.dropdown').forEach(drop => drop.classList.remove('active'));
+                    }
+                });
+            }
+        }
+    
+        handleDropdownToggle();
+        window.addEventListener('resize', () => {
+            // Reset dropdown state if screen size changes
+            document.querySelectorAll('.dropdown').forEach(drop => drop.classList.remove('active'));
+            handleDropdownToggle();
+        });
+    </script>
+        <a href="assets/file/CV_DominikusTM.pdf" target="_blank"
+            class="floating-cv"
+            title="Lihat CV" rel="noopener noreferrer">
+            <svg width="24" height="24" fill="currentColor"
+                class="icon icon-eye" viewBox="0 0 24 24">
+                <path
+                    d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
+                <circle cx="12" cy="12" r="2.5" />
+            </svg>
+        </a>
+        <a href="#" class="scroll-top" title="Kembali ke atas">
+            <svg width="24" height="24" fill="currentColor" class="icon icon-up"
+                viewBox="0 0 24 24">
+                <path
+                    d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.58L20 12l-8-8-8 8z" />
+            </svg>
+        </a>
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollBtn = document.querySelector('.scroll-top');
+            const cvBtn = document.querySelector('.floating-cv');
+        
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.classList.add('show');
+                    cvBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                    cvBtn.classList.remove('show');
+                }
+            });
+        
+            scrollBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        </script>
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Dominikus Tripuspa Mahardika",
+            "jobTitle": "Full-Stack Web Developer",
+            "url": "https://github.com/DominikusTripuspaMahardika",
+            "sameAs": [
+                "https://www.youtube.com/channel/UCnlvfhUF0ucjcHVeuxudRsg",
+                "https://wa.me/6285706800428",
+                "https://github.com/DominikusTripuspaMahardika"
+                ]
+            }
+        </script>
+        <script>
+            window.addEventListener("load", () => {
+                const preloader = document.getElementById("preloader");
+                preloader.style.opacity = "0";
+                preloader.style.visibility = "hidden";
+            });
+        </script>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const days = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+                const months = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+            
+                const day = days[now.getDay()];
+                const date = now.getDate().toString().padStart(2, '0');
+                const month = months[now.getMonth()];
+                const year = now.getFullYear();
+            
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+            
+                const formattedTime = `⏰ ${hours}:${minutes}:${seconds} — ${day}, ${date} ${month} ${year}`;
+                document.getElementById('clock-label').textContent = formattedTime;
+            }
+            
+            // Update setiap detik
+            setInterval(updateClock, 1000);
+            updateClock(); // jalankan sekali di awal
+        </script>
+        <script>
+            const music = document.getElementById('bg-music');
+            const toggleBtnMusic = document.getElementById('music-toggle');
+        
+            window.addEventListener('load', () => {
+                // Coba autoplay
+                music.play().then(() => {
+                    toggleBtnMusic.textContent = "🔊 Matikan Musik";
+                }).catch(() => {
+                    toggleBtnMusic.textContent = "🔈 Nyalakan Musik";
+                });
+            });
+        
+            toggleBtnMusic.addEventListener('click', () => {
+                if (music.paused) {
+                    music.play();
+                    toggleBtnMusic.textContent = "🔊 Matikan Musik";
+                } else {
+                    music.pause();
+                    toggleBtnMusic.textContent = "🔈 Nyalakan Musik";
+                }
+            });
+        </script>
+        <script>
+            function hitungUmur(tanggalLahir) {
+              const today = new Date();
+              const birthDate = new Date(tanggalLahir);
+              let age = today.getFullYear() - birthDate.getFullYear();
+              const m = today.getMonth() - birthDate.getMonth();
+              if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+              }
+              return age;
+            }
+          
+            document.addEventListener("DOMContentLoaded", function () {
+              const umurElement = document.getElementById("umur-dinamis");
+              const umur = hitungUmur("2005-08-05");
+              umurElement.textContent = umur;
+            });
+          </script>
+        <script>
+            // Daftar bagian yang valid beserta ID mereka
+const validSections = {
+    'about': '#about',
+    'skills': '#skills',
+    'projects': '#projects',
+    'experience': '#experience',
+    'certificate': '#certificate',
+    'education': '#education',
+    'planning': '#planning',
+    'vision': '#vision',
+    'contact': '#contact'
+};
+
+// Ambil elemen-elemen penting
+const searchInput = document.getElementById('search-input');
+const suggestionsContainer = document.getElementById('search-suggestions');
+const searchButton = document.querySelector('.search-btn');
+
+// Fungsi untuk menavigasi ke bagian
+function navigateToSection(sectionKey) {
+    const targetId = validSections[sectionKey];
+    if (targetId) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            window.location.hash = targetId;
+        }
+    }
+    searchInput.value = '';
+    suggestionsContainer.innerHTML = '';
+    suggestionsContainer.style.display = 'none';
+}
+
+// Fungsi untuk memperbarui daftar saran
+function updateSuggestions(query) {
+    const normalizedQuery = query.toLowerCase().trim();
+    suggestionsContainer.innerHTML = '';
+
+    if (normalizedQuery === '') {
+        suggestionsContainer.style.display = 'none';
+        return;
+    }
+
+    const matchedSections = Object.keys(validSections).filter(section =>
+        section.includes(normalizedQuery)
+    );
+
+    if (matchedSections.length > 0) {
+        matchedSections.forEach(section => {
+            const suggestionItem = document.createElement('div');
+            suggestionItem.classList.add('suggestion-item');
+            suggestionItem.textContent = section.charAt(0).toUpperCase() + section.slice(1);
+
+            // Klik pada rekomendasi
+            suggestionItem.addEventListener('click', () => {
+                navigateToSection(section);
+            });
+
+            suggestionsContainer.appendChild(suggestionItem);
+        });
+
+        suggestionsContainer.style.display = 'block';
+    } else {
+        suggestionsContainer.style.display = 'none';
+    }
+}
+
+// Ketika pengguna mengetik
+searchInput.addEventListener('input', (e) => {
+    updateSuggestions(e.target.value);
+});
+
+// Klik tombol pencarian
+searchButton.addEventListener('click', () => {
+    const inputValue = searchInput.value.toLowerCase().trim();
+
+    // Langsung arahkan jika input sesuai
+    if (validSections[inputValue]) {
+        navigateToSection(inputValue);
+    } else {
+        suggestionsContainer.style.display = 'none';
+    }
+});
+
+// Tutup saran jika klik di luar
+document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+        suggestionsContainer.style.display = 'none';
+    }
+});
+
+        </script>
+    </body>
+</html>
