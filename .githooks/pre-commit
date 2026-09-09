@@ -1,0 +1,31 @@
+#!/bin/sh
+
+echo "Running tests..."
+npm test
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Commit aborted."
+  exit 1
+fi
+
+echo "Running npm run build..."
+npm run build
+
+# Sync profile page files to static/ (Vite dev) and docs/ (deploy)
+echo "Syncing profile page to static/ and docs/..."
+for dest in static docs; do
+  mkdir -p "$dest/css" "$dest/js" "$dest/data" "$dest/assets"
+  cp profile.html "$dest/profile.html"
+  cp css/styles.css "$dest/css/styles.css"
+  cp css/cinematic.css "$dest/css/cinematic.css"
+  cp css/enhancements.css "$dest/css/enhancements.css"
+  cp js/app.js "$dest/js/app.js"
+  cp js/profile-render.js "$dest/js/profile-render.js"
+  cp js/depth.js "$dest/js/depth.js"
+  cp js/enhancements.js "$dest/js/enhancements.js"
+  cp js/three-scene.js "$dest/js/three-scene.js"
+  cp js/profile-sfx.js "$dest/js/profile-sfx.js"
+  [ -f static/data/ai-cache.json ] && cp static/data/ai-cache.json "$dest/data/ai-cache.json"
+done
+
+# Stage the updated docs/ and static/ folders
+git add docs/ static/

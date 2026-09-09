@@ -1,0 +1,7 @@
+.playwright-mcp/
+node_modules/
+.env
+.DS_Store
+folio-2025/
+coverage/
+.lh/

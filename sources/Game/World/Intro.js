@@ -1,0 +1,418 @@
+import * as THREE from 'three/webgpu'
+import { Game } from '../Game.js'
+import { atan, float, Fn, PI, PI2, positionGeometry, texture, uniform, uv, vec2, vec3, vec4 } from 'three/tsl'
+import gsap from 'gsap'
+import { Inputs } from '../Inputs/Inputs.js'
+
+export class Intro {
+    constructor() {
+        this.game = Game.getInstance()
+
+        const respawn = this.game.respawns.getDefault()
+        this.center = respawn.position.clone()
+
+        this.setCircle()
+        this.setName()
+        this.setLabel()
+        this.startLoadingAnimation()
+    }
+
+    setName() {
+        this.name = {}
+
+        // Canvas
+        const canvas = document.createElement('canvas')
+        canvas.width = 1024
+        canvas.height = 512
+        const ctx = canvas.getContext('2d')
+        ctx.font = '700 320px "Caveat", cursive'
+        ctx.textAlign = 'center'
+        ctx.textBaseline = 'middle'
+        ctx.fillStyle = '#ffffff'
+        ctx.fillText('Naresh', 512, 256)
+
+        // Texture
+        const canvasTexture = new THREE.CanvasTexture(canvas)
+        canvasTexture.minFilter = THREE.LinearFilter
+        canvasTexture.magFilter = THREE.LinearFilter
+        canvasTexture.generateMipmaps = false
+
+        // Material - left-to-right reveal synced with loading progress
+        this.name.progress = uniform(0)
+        const material = new THREE.MeshBasicNodeMaterial({ transparent: true, depthWrite: false, depthTest: false })
+        material.outputNode = Fn(() => {
+            const t = texture(canvasTexture, uv())
+            t.a.lessThan(0.01).discard()
+            uv().x.greaterThan(this.name.progress).discard()
+            return vec4(vec3(0.88, 0.88, 0.94), t.a)
+        })()
+
+        // Geometry - sized to fill ~90% of the circle's apparent width from camera
+        const geometry = new THREE.PlaneGeometry(4.5, 2.25)
+
+        // Mesh - oriented to face camera so text reads parallel to screen
+        const mesh = new THREE.Mesh(geometry, material)
+
+        // Use same spherical angles as View.js camera to orient the plane
+        const phi = Math.PI * (this.game.quality.level === 0 ? 0.31 : 0.27)
+        const theta = Math.PI * 0.25
+
+        mesh.position.copy(this.center)
+        mesh.position.y = 0.001
+
+        const cameraDirection = new THREE.Vector3()
+        cameraDirection.setFromSphericalCoords(1, phi, theta)
+        mesh.lookAt(
+            this.center.x + cameraDirection.x,
+            mesh.position.y + cameraDirection.y,
+            this.center.z + cameraDirection.z
+        )
+
+        this.game.scene.add(mesh)
+        this.name.mesh = mesh
+
+        // Hide - reverse the fill to 0
+        this.name.hide = () => {
+            gsap.to(this.name.progress, {
+                value: 0,
+                duration: 0.5,
+                ease: 'power2.in',
+                overwrite: true
+            })
+        }
+    }
+
+    setLabel() {
+        this.label = new THREE.Group()
+        this.label.position.copy(this.center)
+        this.label.rotation.reorder('YXZ')
+
+        if (this.game.quality.level === 0) {
+            this.label.position.x += 3.5
+            this.label.position.z -= 1
+            this.label.position.y = 3.3
+
+            this.label.rotation.y = 0.4
+        } else {
+            this.label.position.x += 2.3
+            this.label.position.z -= 1.8
+            this.label.position.y = 3.3
+
+            this.label.rotation.y = 0.4
+            this.label.rotation.x = -0.4
+        }
+
+        this.label.scale.setScalar(0.01)
+        this.game.scene.add(this.label)
+    }
+
+    setCircle() {
+        this.circle = {}
+
+        const radius = 3.5
+        const thickness = 0.04
+        this.circle.progress = 0
+        this.circle.smoothedProgress = uniform(0)
+
+        // Geometry
+        const geometry = new THREE.RingGeometry(radius - thickness, radius, 128, 1)
+
+        // Material
+        const material = new THREE.MeshBasicNodeMaterial()
+        material.outputNode = Fn(() => {
+            const angle = atan(positionGeometry.y, positionGeometry.x)
+            const angleProgress = angle.div(PI2).add(0.5).oneMinus()
+
+            this.circle.smoothedProgress.lessThan(angleProgress).discard()
+
+            return vec4(this.game.reveal.color.mul(this.game.reveal.intensity), 1)
+        })()
+
+        // Mesh
+        const mesh = new THREE.Mesh(geometry, material)
+
+        mesh.position.copy(this.center)
+        mesh.position.y = 0.001
+        mesh.rotation.x = -Math.PI * 0.5
+        mesh.rotation.z = Math.PI * 0.5
+
+        this.game.scene.add(mesh)
+
+        this.circle.mesh = mesh
+
+        // Hide
+        this.circle.hide = (callback = null) => {
+            const dummy = { scale: 1 }
+            const speedMultiplier = this.game.debug.active ? 4 : 1
+            gsap.to(dummy, {
+                scale: 0,
+                duration: 1.5 / speedMultiplier,
+                // ease: 'back.in(1.7)',
+                ease: 'power4.in',
+                overwrite: true,
+                onUpdate: () => {
+                    mesh.scale.setScalar(dummy.scale)
+                },
+                onComplete: () => {
+                    if (typeof callback === 'function') callback()
+
+                    mesh.removeFromParent()
+                }
+            })
+        }
+    }
+
+    setText() {
+        this.text = {}
+
+        // Geometry
+        const scale = 1.3
+        const geometry = new THREE.PlaneGeometry(2 * scale, 1 * scale)
+
+        // Texture
+        this.text.updateTexture = () => {
+            // Define text
+            let lines = ['Click to', 'Start']
+
+            if (this.game.inputs.mode === Inputs.MODE_GAMEPAD) {
+                if (this.game.inputs.gamepad.type === 'xbox') {
+                    lines = ['Press (A)', 'to Start']
+                } else {
+                    lines = ['Press (X)', 'to Start']
+                }
+            } else if (this.game.inputs.mode === Inputs.MODE_TOUCH) {
+                lines = ['Tap to', 'Start']
+            }
+
+            // Canvas
+            const canvas = document.createElement('canvas')
+            canvas.width = 512
+            canvas.height = 256
+            const ctx = canvas.getContext('2d')
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+            // Text style
+            ctx.font = '700 85px "Caveat", cursive'
+            ctx.textAlign = 'center'
+            ctx.textBaseline = 'middle'
+            ctx.fillStyle = '#ffffff'
+
+            // Draw text in two lines
+            ctx.fillText(lines[0], 256, 75)
+            ctx.fillText(lines[1], 256, 165)
+
+            // Arrow style
+            ctx.strokeStyle = '#ffffff'
+            ctx.lineWidth = 4
+            ctx.lineCap = 'round'
+            ctx.lineJoin = 'round'
+
+            // Draw hand-drawn style arrow pointing from left to the text
+            ctx.beginPath()
+            ctx.moveTo(100, 140)
+            ctx.quadraticCurveTo(50, 150, 30, 210)
+            ctx.stroke()
+
+            // Arrow head
+            ctx.beginPath()
+            ctx.moveTo(15, 185)
+            ctx.lineTo(30, 210)
+            ctx.lineTo(55, 200)
+            ctx.stroke()
+
+            const canvasTexture = new THREE.CanvasTexture(canvas)
+            canvasTexture.minFilter = THREE.LinearFilter
+            canvasTexture.magFilter = THREE.LinearFilter
+            canvasTexture.generateMipmaps = false
+
+            // Update material
+            material.outputNode = Fn(() => {
+                const t = texture(canvasTexture, uv())
+                t.a.lessThan(0.5).discard()
+                return vec4(1)
+            })()
+            material.needsUpdate = true
+            mesh.visible = true
+        }
+
+        // Material
+        const material = new THREE.MeshBasicNodeMaterial({
+            transparent: true
+        })
+
+        this.game.inputs.gamepad.events.on('typeChange', this.text.updateTexture)
+        this.game.inputs.events.on('modeChange', this.text.updateTexture)
+
+        const mesh = new THREE.Mesh(geometry, material)
+        mesh.visible = false
+
+        this.label.add(mesh)
+
+        this.text.mesh = mesh
+
+        this.text.updateTexture()
+    }
+
+    setSoundButton() {
+        this.soundButton = {}
+
+        // Texture
+        const texture = this.game.resources.soundTexture
+
+        if (this.game.audio.mute.active) texture.offset.x = 0.5
+
+        // Geometry
+        const scale = 0.5
+        const geometry = new THREE.PlaneGeometry((50 / 38) * scale, 1 * scale)
+
+        // Material
+        const intensity = uniform(1)
+        const material = new THREE.MeshBasicNodeMaterial({
+            alphaTest: 0.5,
+            alphaMap: texture,
+            transparent: true,
+            outputNode: vec4(vec3(1).mul(intensity), 1)
+        })
+
+        // Mesh
+        const mesh = new THREE.Mesh(geometry, material)
+        mesh.position.x = 0.38
+        mesh.position.y = -1
+        this.label.add(mesh)
+
+        // Intersect
+        const position = this.label.position.clone()
+        position.x += 0.38
+        position.y += -1
+
+        this.soundButton.intersect = this.game.rayCursor.addIntersect({
+            active: true,
+            shape: new THREE.Sphere(position, 0.5),
+            onClick: () => {
+                this.game.audio.mute.toggle()
+            },
+            onEnter: () => {
+                gsap.to(intensity, { value: 1.5, duration: 0.3, overwrite: true })
+            },
+            onLeave: () => {
+                gsap.to(intensity, { value: 1, duration: 0.3, overwrite: true })
+            }
+        })
+
+        this.game.audio.events.on('muteChange', (active) => {
+            texture.offset.x = active ? 0.5 : 0
+        })
+
+        this.soundButton.mesh = mesh
+    }
+
+    showLabel() {
+        const dummy = { scale: 0 }
+        const speedMultiplier = this.game.debug.active ? 4 : 1
+        gsap.to(dummy, {
+            scale: 1,
+            duration: 2 / speedMultiplier,
+            delay: 1 / speedMultiplier,
+            ease: 'elastic.out(0.5)',
+            overwrite: true,
+            onUpdate: () => {
+                this.label.scale.setScalar(dummy.scale)
+            }
+        })
+    }
+
+    hideLabel() {
+        const speedMultiplier = this.game.debug.active ? 4 : 1
+        const dummy = { scale: 1 }
+        gsap.to(dummy, {
+            scale: 0,
+            duration: 0.3 / speedMultiplier,
+            ease: 'power2.in',
+            overwrite: true,
+            onUpdate: () => {
+                this.label.scale.setScalar(dummy.scale)
+            },
+            onComplete: () => {
+                this.text.mesh.removeFromParent()
+                this.soundButton.mesh.removeFromParent()
+                this.game.rayCursor.removeIntersect(this.soundButton.intersect)
+            }
+        })
+    }
+
+    startLoadingAnimation() {
+        this.visualProgress = { value: 0 }
+
+        let skipLoading = false
+        try {
+            if (sessionStorage.getItem('skip-world-intro-loading') === '1') {
+                sessionStorage.removeItem('skip-world-intro-loading')
+                skipLoading = true
+            }
+        } catch (e) {}
+        if (window.__embed) skipLoading = true
+
+        const applyProgress = (v) => {
+            this.circle.smoothedProgress.value = v
+            this.name.progress.value = v
+            const percentEl = document.querySelector('.js-loading-percentage')
+            if (percentEl) percentEl.textContent = `${Math.round(v * 100)}%`
+        }
+
+        this.loadingComplete = new Promise((resolve) => {
+            if (skipLoading) {
+                this.visualProgress.value = 1
+                applyProgress(1)
+                resolve()
+                return
+            }
+
+            gsap.to(this.visualProgress, {
+                value: 1,
+                duration: 5,
+                ease: 'none',
+                onUpdate: () => applyProgress(this.visualProgress.value),
+                onComplete: resolve
+            })
+        })
+    }
+
+    updateProgress(progress) {
+        this.circle.progress = progress
+    }
+
+    update() {
+        // Visual progress handled by startLoadingAnimation()
+    }
+
+    destroy() {
+        this.label.removeFromParent()
+
+        // Geometries
+        this.circle.mesh.geometry.dispose()
+        this.name.mesh.geometry.dispose()
+        this.soundButton.mesh.geometry.dispose()
+        this.text.mesh.geometry.dispose()
+
+        // Materials
+        this.circle.mesh.material.dispose()
+        this.name.mesh.material.dispose()
+        this.soundButton.mesh.material.dispose()
+        this.text.mesh.material.dispose()
+
+        // Remove name mesh from scene
+        this.name.mesh.removeFromParent()
+
+        // Textures
+        this.game.resources.soundTexture.dispose()
+
+        this.text.textures.forEach((value, key) => {
+            value.dispose()
+        })
+
+        // Events
+        this.game.inputs.gamepad.events.off('typeChange', this.text.updateTexture)
+        this.game.inputs.events.off('modeChange', this.text.updateTexture)
+    }
+}
