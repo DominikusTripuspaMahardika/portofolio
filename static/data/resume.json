@@ -1,1 +1,1068 @@
-../../resume.json
+{
+    "personal": {
+        "name": "Naresh Sekar",
+        "firstName": "Naresh",
+        "email": "nareshnavinash@gmail.com",
+        "photo": "/profile.jpg",
+        "title": "Engineering Manager",
+        "tagline": "I build teams that ship quality software, powered by AI.",
+        "roleTags": [
+            "Engineering Manager",
+            "AI",
+            "Builder"
+        ],
+        "bio": "Engineering leader focused on AI adoption strategy and quality.",
+        "mission": "I'm an Engineering Manager who bridges the gap between cutting-edge AI and reliable software delivery. With over a decade of experience across startups and scale-ups, I specialize in building high-performing teams, designing quality-first engineering cultures, and leveraging AI to accelerate product development. My focus includes AI governance, process optimization, stakeholder management, and risk-aware execution. I believe great engineering leadership is about multiplying the impact of every person on your team."
+    },
+    "site": {
+        "seo": {
+            "title": "Naresh Sekar | Engineering Manager - AI Adoption & Leadership",
+            "description": "Naresh Sekar - Engineering Manager with 11+ years in software engineering. Specializing in AI adoption strategy, AI-augmented development, and building high-performing engineering teams.",
+            "keywords": "Engineering Manager, Software Engineering Manager, AI adoption strategy, AI governance, AI literacy, AI-augmented development, Generative AI strategy, Engineering leadership, Team leadership, Process optimization, Stakeholder management",
+            "author": "Naresh Sekar",
+            "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+            "themeColor": "#080818",
+            "canonicalUrl": "https://nareshnavinash.github.io/profile.html",
+            "imageUrl": "https://nareshnavinash.github.io/social/share-image.jpg",
+            "twitterCard": "summary_large_image",
+            "ogType": "profile",
+            "ogSiteName": "Naresh Sekar",
+            "ogLocale": "en_US",
+            "ogUrl": "https://nareshnavinash.github.io/profile.html",
+            "imageWidth": "1200",
+            "imageHeight": "630",
+            "imageAlt": "Naresh Sekar - Engineering Manager",
+            "schemaProfileName": "Naresh Sekar | Engineering Manager Portfolio",
+            "schemaJobTitle": "Engineering Manager",
+            "schemaPersonDescription": "Engineering Manager focused on AI adoption strategy, AI-augmented development, and engineering leadership at scale.",
+            "schemaKnowsAbout": [
+                "Engineering Management",
+                "Software Engineering Management",
+                "AI Adoption Strategy",
+                "AI Literacy",
+                "AI-Augmented Development",
+                "LLM Development and Application",
+                "AI Governance",
+                "Engineering Leadership",
+                "Process Optimization",
+                "Stakeholder Management",
+                "Team Building"
+            ]
+        },
+        "navigation": {
+            "mainAriaLabel": "Main navigation",
+            "mobileAriaLabel": "Mobile navigation",
+            "logoText": "naresh",
+            "logoAriaLabel": "Naresh Sekar - Home",
+            "logoHref": "#hero",
+            "themeToggleAriaLabel": "Toggle dark mode",
+            "hamburgerAriaLabel": "Toggle navigation menu",
+            "items": [
+                {
+                    "key": "about",
+                    "label": "about",
+                    "href": "#about"
+                },
+                {
+                    "key": "experience",
+                    "label": "experience",
+                    "href": "#career"
+                },
+                {
+                    "key": "skills",
+                    "label": "skills",
+                    "href": "#skills"
+                },
+                {
+                    "key": "leadership",
+                    "label": "leadership",
+                    "href": "#leadership"
+                },
+                {
+                    "key": "publications",
+                    "label": "publications",
+                    "href": "#publications"
+                },
+                {
+                    "key": "certifications",
+                    "label": "certifications",
+                    "href": "#certifications"
+                },
+                {
+                    "key": "contact",
+                    "label": "contact",
+                    "href": "#contact"
+                }
+            ],
+            "worldLink": {
+                "label": "Explore 3D Portfolio",
+                "href": "/",
+                "ariaLabel": "Explore Naresh Sekar's interactive 3D portfolio world"
+            }
+        },
+        "hero": {
+            "greetingPrefix": "Hey there, I'm ",
+            "greetingSuffix": " -",
+            "headingHtml": "I build <span class=\"text-outline\">teams</span> that ship quality software, powered by <span class=\"text-outline\">AI.</span>"
+        },
+        "contact": {
+            "primarySocialKeys": [
+                "linkedin",
+                "github",
+                "medium"
+            ]
+        },
+        "footer": {
+            "extraSocialKeys": [
+                "npm",
+                "pypi",
+                "rubygems"
+            ]
+        },
+        "labels": {
+            "viewDetails": "View details",
+            "publicationsAmazonCta": "View on Amazon",
+            "publicationsMediumCta": "Read on Medium",
+            "footerGreeting": "Have a Good Day!",
+            "footerTagline": "Built with vanilla HTML, CSS & JS",
+            "footerCopyrightTemplate": "&copy; {year} {name}. All rights reserved.",
+            "backToTopAriaLabel": "Back to top"
+        }
+    },
+    "social": {
+        "linkedin": {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/nareshnavinash/"
+        },
+        "github": {
+            "name": "GitHub",
+            "url": "https://github.com/nareshnavinash"
+        },
+        "medium": {
+            "name": "Medium",
+            "url": "https://medium.com/@nareshnavinash"
+        },
+        "x": {
+            "name": "X",
+            "url": "https://x.com/navinashnaresh"
+        },
+        "npm": {
+            "name": "npm",
+            "url": "https://www.npmjs.com/~nareshnavinash"
+        },
+        "pypi": {
+            "name": "PyPI",
+            "url": "https://pypi.org/user/nareshnavinash/"
+        },
+        "rubygems": {
+            "name": "RubyGems",
+            "url": "https://rubygems.org/profiles/nareshnavinash"
+        }
+    },
+    "about": {
+        "title": "About.",
+        "subtitle": "Engineering Manager focused on AI adoption strategy, AI literacy, and quality engineering at scale.",
+        "cards": [
+            {
+                "title": "AI Adoption Strategy",
+                "description": "Integrating AI/ML capabilities into product workflows - from generative AI implementation to AI governance, intelligent test generation, and data-driven decision systems."
+            },
+            {
+                "title": "Team Building",
+                "description": "Scaling engineering teams from 5 to 30+, establishing career frameworks, hiring pipelines, and fostering cultures of ownership, AI literacy, and continuous improvement."
+            },
+            {
+                "title": "Quality Engineering",
+                "description": "Designing end-to-end quality strategies - test automation frameworks, CI/CD pipelines, observability, and risk assessment with shift-left quality practices at scale."
+            }
+        ]
+    },
+    "career": {
+        "title": "Experience.",
+        "subtitle": "A decade of growth - from hands-on engineering to leading teams.",
+        "recentCount": 3,
+        "tailCard": {
+            "role": "Before that",
+            "teaser": "~5 years as SDET and early-career engineer across four companies",
+            "dateLabel": "June 2015 - March 2020"
+        },
+        "positions": [
+            {
+                "company": "TestGorilla",
+                "url": "https://www.testgorilla.com",
+                "roles": [
+                    {
+                        "role": "Engineering Manager",
+                        "shortRole": "Engineering Manager",
+                        "date": "August 2023 - Present",
+                        "startYear": 2023,
+                        "startMonth": 8,
+                        "endYear": null,
+                        "endMonth": null,
+                        "location": "Remote",
+                        "sections": [
+                            {
+                                "title": "AI Product Strategy & Monetization",
+                                "points": [
+                                    "Designed and launched a scalable credit-based pricing engine specifically engineered to measure and bill for Generative AI usage (tokens/compute) at the feature level, enabling flexible business models for AI-heavy tools.",
+                                    "Led the engineering of a cutting-edge AI Video Avatar platform Tavus (integrating video/audio generation APIs) to conduct real-time candidate interviews, significantly automating the assessment process.",
+                                    "Established a rigorous Evaluation (Evals) framework using LangFuse to score and monitor the performance of AI models and prompts. Created feedback loops to tweak prompts and model parameters in production, ensuring consistent high-quality output for the AI interviewer."
+                                ]
+                            },
+                            {
+                                "title": "AI-Augmented Engineering (DevEx)",
+                                "points": [
+                                    "Integrated Claude Code sub-agents into the development workflow to automate code generation and Pull Request (PR) creation. Successfully reduced the cycle time for complex Epics to ~3 days by shifting developer focus from writing boilerplate to reviewing AI-generated architecture.",
+                                    "Deployed AI agents to autonomously generate unit and integration tests and conduct preliminary code reviews, ensuring strictly enforced coding standards and preventing architectural drift in AI-generated code.",
+                                    "Initiated a strategic refactor to treat Code-as-Documentation, optimizing the codebase structure for LLM context windows. This enabled AI agents to accurately analyze, document, and autonomously refactor legacy code with high precision."
+                                ]
+                            },
+                            {
+                                "title": "Team Leadership & Core Operations",
+                                "points": [
+                                    "Led and mentored a high-performing team of 5 engineers, responsible for onboarding, payments, & subscriptions, by balancing ambitious AI technology goals with pragmatic delivery targets.",
+                                    "Owned critical integrations like Chargebee, HubSpot, 18 ATS platforms, and Stripe, ensuring seamless data flow alongside new AI capabilities.",
+                                    "Defined and tracked team OKRs and DORA metrics, adapting them to account for the increased velocity provided by AI-assisted development tools.",
+                                    "Collaborated with Product, Design, Sales, Marketing, GTM, and Finance to scope and prioritize projects aligned with business goals and advocated for engineering needs at the leadership level."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "role": "Lead Software Development Engineer in Test",
+                        "shortRole": "Lead SDET",
+                        "date": "April 2022 - August 2023",
+                        "startYear": 2022,
+                        "startMonth": 4,
+                        "endYear": 2023,
+                        "endMonth": 8,
+                        "location": "Remote",
+                        "sections": [
+                            {
+                                "title": null,
+                                "points": [
+                                    "Architected the CI/CD infrastructure that transformed release velocity from bi-weekly to 5x daily. This high-frequency deployment model established the necessary foundation for rapid A/B testing and iterative AI model tuning in production.",
+                                    "Developed sophisticated E2E API testing frameworks using Python (pytest). This deep Python infrastructure experience laid the technical groundwork for seamless integration with modern Python-centric AI/LLM libraries.",
+                                    "Led backend load testing using k6.io and frontend performance profiling with Lighthouse. Established performance baselines critical for later measuring the latency and compute impact of integrating LLM features.",
+                                    "Integrated Storybook with Playwright for Angular.js, enhancing CI visual and accessibility tests and implemented Playwright for UI E2E tests in the CD pipeline, ensuring rapid feedback."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": "Hopin",
+                "url": "https://hopin.com",
+                "roles": [
+                    {
+                        "role": "Senior Software Development Engineer in Test",
+                        "shortRole": "Senior SDET",
+                        "date": "February 2021 - March 2022",
+                        "startYear": 2021,
+                        "startMonth": 2,
+                        "endYear": 2022,
+                        "endMonth": 3,
+                        "location": "Remote",
+                        "sections": [
+                            {
+                                "title": null,
+                                "points": [
+                                    "Optimized release pipeline in GitLab, reducing execution time from 45 to ~15 mins, enabling ~20 daily releases.",
+                                    "Introduced Pact-Contract testing with self-hosted pact broker, ensuring stable pipeline and frequent deployments.",
+                                    "Implemented Browserstack for cross-browser testing, minimizing compatibility concerns.",
+                                    "Conducted interviews at Hopin and provided technical mentorship to test engineers.",
+                                    "Facilitated cross-functional collaboration via closed and open beta launch.",
+                                    "Deployed Visual Regression Tests with Testcafe and Percy in GitHub pre-merge state, empowering team autonomy."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": "Vue.ai",
+                "url": "https://vue.ai",
+                "roles": [
+                    {
+                        "role": "Software Development Engineer in Test",
+                        "shortRole": "Senior SDET",
+                        "date": "March 2020 - February 2021",
+                        "startYear": 2020,
+                        "startMonth": 3,
+                        "endYear": 2021,
+                        "endMonth": 2,
+                        "location": "Chennai, India",
+                        "sections": [
+                            {
+                                "title": null,
+                                "points": [
+                                    "Developed Python packages for REST API & UI automation, supporting ML/AI use cases organization-wide.",
+                                    "Managed two teams in an 8:1 Dev to SDET ratio, implementing Agile release processes.",
+                                    "Configured CI/CD for ML/AI microservice using Jenkins, Bitbucket, AWS, and Spotinst, reducing infrastructure costs via IaC."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": "WeInvest",
+                "url": "https://weinvest.net",
+                "roles": [
+                    {
+                        "role": "Software Development Engineer in Test",
+                        "shortRole": "Senior SDET",
+                        "date": "January 2019 - February 2020",
+                        "startYear": 2019,
+                        "startMonth": 1,
+                        "endYear": 2020,
+                        "endMonth": 2,
+                        "location": "Chennai, India",
+                        "sections": [
+                            {
+                                "title": null,
+                                "points": [
+                                    "As a first SDET hire, managed internal testing servers to accelerate testing cycles.",
+                                    "Reduced costs by leveraging a freemium version of Postman for ETL transformation support.",
+                                    "Modularized and transformed UI and GraphQL automation frameworks into Ruby gems.",
+                                    "Spearheaded robust CI/CD integration with GitHub, Jenkins, and Docker.",
+                                    "Utilized Cucumber alongside RSpec for effective Behavior Driven Development (BDD)."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": "Freshworks",
+                "url": "https://www.freshworks.com",
+                "roles": [
+                    {
+                        "role": "Software Engineer",
+                        "shortRole": "Software Engineer",
+                        "date": "June 2017 - January 2019",
+                        "startYear": 2017,
+                        "startMonth": 6,
+                        "endYear": 2019,
+                        "endMonth": 1,
+                        "location": "Chennai, India",
+                        "sections": [
+                            {
+                                "title": null,
+                                "points": [
+                                    "Been part of the launch of Freshcaller product in beta and GA phases.",
+                                    "Strategized manual and automation test execution in pre-development stages through collaboration with Product Owner and Tech Leads, optimizing release processes.",
+                                    "Upheld code quality and comprehensive unit test coverage starting from the PR stage.",
+                                    "Achieved 100% regression automation coverage and managed Jenkins pipelines."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": "Cognizant",
+                "url": "https://www.cognizant.com",
+                "roles": [
+                    {
+                        "role": "Programmer Analyst",
+                        "shortRole": "Programmer Analyst",
+                        "date": "June 2015 - June 2017",
+                        "startYear": 2015,
+                        "startMonth": 6,
+                        "endYear": 2017,
+                        "endMonth": 6,
+                        "location": "Chennai, India",
+                        "sections": [
+                            {
+                                "title": null,
+                                "points": [
+                                    "Ensured adherence to CMMI Level 5 practices across all projects.",
+                                    "Spearheaded web application automation using HP's UFT tool. Proactively automated tasks to streamline operations and save time.",
+                                    "Reduced testing costs in a data server migration project with an automation script, earning recognition as Best Automation Resource for the Year 2016."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "openSource": {
+        "url": "https://github.com/nareshnavinash",
+        "totalMediumPosts": 850,
+        "pinnedArticleUrls": [
+            "https://medium.com/@nareshnavinash/an-8b-model-that-fits-in-1-2-gb-changed-how-i-think-about-local-ai-78665d154f74",
+            "https://medium.com/@nareshnavinash/youre-paying-for-claude-max-but-are-you-actually-using-it-8125696d96f8",
+            "https://medium.com/@nareshnavinash/i-replaced-grammarly-with-local-ai-with-3-days-of-vibe-coding-72724bc37a39",
+            "https://medium.com/@nareshnavinash/why-i-ditched-grammarly-to-build-my-own-ai-writing-assistant-6504278ca754",
+            "https://medium.com/@nareshnavinash/a-fine-tuned-grammar-model-lost-to-a-1-bit-llm-with-a-two-sentence-prompt-bf1a6376f03b",
+            "https://medium.com/@nareshnavinash/can-our-economy-grow-forever-on-a-finite-planet-39c0b1134023"
+        ],
+        "fallbackRecentUrls": [
+            "https://medium.com/@nareshnavinash/taming-the-ai-tongue-f7e92333e306"
+        ],
+        "pinnedArticlesHeading": "Pinned Articles",
+        "recentArticlesHeading": "Latest Articles",
+        "pinnedArticles": [
+            {
+                "title": "An 8B Model That Fits in 1.2 GB Changed How I Think About Local AI",
+                "url": "https://medium.com/@nareshnavinash/an-8b-model-that-fits-in-1-2-gb-changed-how-i-think-about-local-ai-78665d154f74",
+                "date": "2026-04-03T14:47:22.000Z",
+                "description": "How I went from 4.5s responses with Ollama to 56ms by building my own CLISo, prism-ml just dropped something that got me genuinely excited: Bonsai the first viable 1-bit quantized LLMs. An 8 billion p",
+                "tags": [
+                    "technology",
+                    "software-engineering",
+                    "machine-learning",
+                    "artificial-intelligence",
+                    "ai"
+                ],
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*_UPt-_s6yfBI2ogk9RhvPg.png"
+            },
+            {
+                "title": "You’re Paying for Claude Max. But Are You Actually Using It?",
+                "url": "https://medium.com/@nareshnavinash/youre-paying-for-claude-max-but-are-you-actually-using-it-8125696d96f8",
+                "date": "2026-03-24T15:06:27.000Z",
+                "description": "How I built a terminal notification tool to stop babysitting Claude Code.For a while, I had this uncomfortable feeling that I wasn’t getting my money’s worth. Not because the AI wasn’t good, but becau",
+                "tags": [
+                    "productivity",
+                    "technology",
+                    "claude-code",
+                    "artificial-intelligence",
+                    "ai"
+                ],
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*JzsErnm85wnVaBtWOD59Lw.png"
+            },
+            {
+                "title": "I Replaced Grammarly with Local AI with 3 days of Vibe coding",
+                "url": "https://medium.com/@nareshnavinash/i-replaced-grammarly-with-local-ai-with-3-days-of-vibe-coding-72724bc37a39",
+                "date": "2026-03-01T07:52:23.000Z",
+                "description": "From Cloud LLMs to On-Device Privacy! Here is the stack that made it possible.Last week, I shared my journey of “vibe coding” a replacement for Grammarly called GhostEdit. (If you missed that, you can",
+                "tags": [
+                    "business",
+                    "artificial-intelligence",
+                    "llm",
+                    "money",
+                    "machine-learning"
+                ],
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*Mx_DjXnjLhfz_DHWJ4PIvA.png"
+            },
+            {
+                "title": "Why I Ditched Grammarly to Build My Own AI Writing Assistant",
+                "url": "https://medium.com/@nareshnavinash/why-i-ditched-grammarly-to-build-my-own-ai-writing-assistant-6504278ca754",
+                "date": "2026-02-22T14:19:53.000Z",
+                "description": "And Why 100% Unit Test Coverage is the New Mandatory for Responsible Leverage of AI!TL;DR: Grammarly removed the “Fix All via Tab” feature. I got “brain itch,” and forced to create an alternative that",
+                "tags": [
+                    "ai-agent",
+                    "coding",
+                    "software-development",
+                    "ai",
+                    "ios"
+                ],
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*acLSsq9yULPrWOpF4lC8Nw.png"
+            },
+            {
+                "title": "A Fine-Tuned Grammar Model Lost to a 1-Bit LLM With a Two-Sentence Prompt",
+                "url": "https://medium.com/@nareshnavinash/a-fine-tuned-grammar-model-lost-to-a-1-bit-llm-with-a-two-sentence-prompt-bf1a6376f03b",
+                "date": "2026-04-04T14:49:17.000Z",
+                "description": "If It Fits in the Same Latency Budget, It’s a Fair Fight!In my last article, I built a CLI to run prism-ml’s Bonsai 1-bit models locally. That was about speed: getting from Ollama’s 4.5-second respons",
+                "tags": [
+                    "artificial-intelligence",
+                    "software-engineering",
+                    "ai",
+                    "machine-learning",
+                    "technology"
+                ],
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*M5fWKeBGtCorpvLYSmRlkg.png"
+            },
+            {
+                "title": "Can Our Economy Grow Forever on a Finite Planet?",
+                "url": "https://medium.com/@nareshnavinash/can-our-economy-grow-forever-on-a-finite-planet-39c0b1134023",
+                "date": "2026-04-07T06:25:54.517Z",
+                "description": "Unpacking the Clash Between Endless Economic Growth, Resource Limits, and the Bold Vision of a Post-Growth World",
+                "tags": [
+                    "economics",
+                    "business",
+                    "money",
+                    "life",
+                    "growth"
+                ],
+                "thumbnail": "https://miro.medium.com/v2/resize:fit:1200/1*e8RgLjv1uNKNZAxQNPGnDw.png"
+            }
+        ],
+        "recentArticles": [
+            {
+                "title": "My Daughter Asked Why Those Fans Were Showing Their Fingers.",
+                "url": "https://medium.com/@nareshnavinash/my-daughter-asked-why-those-fans-were-showing-their-fingers-91c1bd419f14",
+                "date": "2026-04-12T14:56:17.000Z",
+                "description": "So I Built a Browser Extension!How a five-year-old’s innocent question led to PG Patrol a Chrome extension that replaces profanity with “fiddlesticks” and NSFW images with kittens.We were looking for ",
+                "tags": [
+                    "privacy",
+                    "technology",
+                    "ai",
+                    "artificial-intelligence",
+                    "machine-learning"
+                ],
+                "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*FU8tvmLlxZtnwvppJ1IxWg.png"
+            },
+            {
+                "title": "How Spotify Rewrote the Rules of Agile at Scale",
+                "url": "https://medium.com/@nareshnavinash/how-spotify-rewrote-the-rules-of-agile-at-scale-90b6f870823c",
+                "date": "2025-10-13T17:46:41.000Z",
+                "description": "Spotify’s challenge was not one of survival, but of success. The company’s rapid growth was threatening to crush the very startup culture…",
+                "tags": [
+                    "business",
+                    "leadership",
+                    "agile-methodology",
+                    "technology",
+                    "management"
+                ],
+                "thumbnail": "https://miro.medium.com/v2/resize:fit:1200/1*O-LOq_wturAEmMcAqjxxsQ.png"
+            },
+            {
+                "title": "Beyond the Box: Domino’s Recipe for a Successful Project Landing",
+                "url": "https://medium.com/@nareshnavinash/beyond-the-box-dominos-recipe-for-a-successful-project-landing-e9b3f0458e9f",
+                "date": "2025-09-10T16:52:18.000Z",
+                "description": "Domino’s Pizza engineered one of the most remarkable corporate turnarounds in modern history. Faced with a reputation for taste-free pizza…",
+                "tags": [
+                    "leadership",
+                    "management",
+                    "technology",
+                    "business",
+                    "money"
+                ],
+                "thumbnail": "https://miro.medium.com/v2/resize:fit:1200/1*eoO4SPY3xDHHgTtPAbAb8w.png"
+            },
+            {
+                "title": "Vision Without Sight: The Google Glass Lesson in Project Landings",
+                "url": "https://medium.com/@nareshnavinash/vision-without-sight-the-google-glass-lesson-in-project-landings-eb2974180a09",
+                "date": "2025-09-09T16:47:41.000Z",
+                "description": "Google launched its futuristic “Glass” wearable with one of the most spectacular product demonstrations in history.",
+                "tags": [
+                    "management",
+                    "leadership",
+                    "technology",
+                    "business",
+                    "money"
+                ],
+                "thumbnail": "https://miro.medium.com/v2/resize:fit:1200/1*k4V4BhVHHVPhLRQnjgd9Ug.png"
+            },
+            {
+                "title": "Project Landing: Disney’s Billion-Dollar Wristband",
+                "url": "https://medium.com/@nareshnavinash/project-landing-disneys-billion-dollar-wristband-94d95de16887",
+                "date": "2025-09-08T16:41:41.000Z",
+                "description": "Disney Proved a Project’s True Success Lies in its Landing, Not its Launch",
+                "tags": [
+                    "money",
+                    "technology",
+                    "management",
+                    "business",
+                    "leadership"
+                ],
+                "thumbnail": "https://miro.medium.com/v2/resize:fit:1200/1*KpdUQkq1R92ZmhF8WkSLCQ.png"
+            },
+            {
+                "title": "Taming the AI Tongue",
+                "url": "https://medium.com/@nareshnavinash/taming-the-ai-tongue-f7e92333e306",
+                "date": "2025-05-20T17:16:48.638Z",
+                "description": "A Step-by-Step Guide to Using Frequency and Presence Penalties in the OpenAI API",
+                "tags": [
+                    "ai",
+                    "artificial-intelligence",
+                    "machine-learning",
+                    "technology",
+                    "business"
+                ],
+                "thumbnail": "https://miro.medium.com/v2/resize:fit:1200/1*3NNhPBRa6egh0z_DGHSK5g.png"
+            }
+        ],
+        "platforms": [
+            "npm",
+            "PyPI",
+            "RubyGems",
+            "GitHub"
+        ],
+        "section": "Published Packages & Frameworks",
+        "points": [
+            "PyRest-Python: REST API automation framework with snap mode and image comparison.",
+            "newman-run: Run multiple Postman collections with single feed file, embedded reporting.",
+            "Cypress-PageObjectModel: Page Object Model framework for Cypress.",
+            "Selpy & SnaPyRest: Python modules for Selenium POM and REST API automation.",
+            "Teber: Multi-language test automation framework (Ruby, Java) with Allure reporting.",
+            "playwright-TS-pom: Playwright POM with GitLab CI and DataDog integration."
+        ],
+        "repos": {
+            "starred": [
+                {
+                    "name": "PyRest-Python",
+                    "description": "REST API automation framework with snap mode, includes comparing image files",
+                    "url": "https://github.com/nareshnavinash/PyRest-Python",
+                    "stars": 20,
+                    "language": "Python",
+                    "homepage": "https://nareshnavinash.github.io/PyRest-Python/",
+                    "hasPages": true,
+                    "createdAt": "2020-02-19T06:45:42Z",
+                    "topics": [
+                        "api-automation",
+                        "automation-framework",
+                        "image-comparison",
+                        "python",
+                        "rest-api",
+                        "snap-mode"
+                    ],
+                    "thumbnail": "https://repository-images.githubusercontent.com/241552215/a625b000-57e0-11ea-9df2-15977adf8405"
+                },
+                {
+                    "name": "newman-run",
+                    "description": "Run multiple postman collections along with predefined configs using a single feed file. Reduces command-line arguments since reporting (allure, JSON, CLI, and HTML) is embedded internally.",
+                    "url": "https://github.com/nareshnavinash/newman-run",
+                    "stars": 19,
+                    "language": "JavaScript",
+                    "homepage": "https://nareshnavinash.github.io/newman-run/",
+                    "hasPages": true,
+                    "createdAt": "2020-07-19T11:27:17Z",
+                    "topics": [
+                        "api-automation",
+                        "newman",
+                        "newman-run",
+                        "npm",
+                        "npm-package",
+                        "postman",
+                        "runner"
+                    ],
+                    "thumbnail": "https://repository-images.githubusercontent.com/280851173/fa496d80-cabc-11ea-9011-d91bf1514a8e"
+                },
+                {
+                    "name": "Cypress-PageObjectModel",
+                    "description": "Page Object Model framework using Cypress",
+                    "url": "https://github.com/nareshnavinash/Cypress-PageObjectModel",
+                    "stars": 12,
+                    "language": "JavaScript",
+                    "homepage": "https://nareshnavinash.github.io/Cypress-PageObjectModel/",
+                    "hasPages": true,
+                    "createdAt": "2020-06-25T16:51:16Z",
+                    "topics": [
+                        "automation",
+                        "cypress",
+                        "javascript",
+                        "page-object-model",
+                        "ui-automation"
+                    ],
+                    "thumbnail": "https://repository-images.githubusercontent.com/274968993/7d6f9e80-bed5-11ea-8ef9-835e418a3e42"
+                },
+                {
+                    "name": "bonsai",
+                    "description": "CLI for running prism-ml's 1-bit Bonsai models locally. Auto-manages llama.cpp server, downloads from HuggingFace, exposes OpenAI-compatible API.",
+                    "url": "https://github.com/nareshnavinash/bonsai",
+                    "stars": 7,
+                    "language": "Go",
+                    "homepage": "https://nareshnavinash.github.io/bonsai/",
+                    "hasPages": true,
+                    "createdAt": "2026-04-03T02:16:53Z",
+                    "topics": [
+                        "ai",
+                        "bonsai",
+                        "cli",
+                        "gguf",
+                        "go",
+                        "golang",
+                        "huggingface",
+                        "local-llm",
+                        "ollama",
+                        "on-device-ai",
+                        "privacy",
+                        "quantized-models"
+                    ],
+                    "thumbnail": "https://raw.githubusercontent.com/nareshnavinash/bonsai/main/assets/banner.png"
+                },
+                {
+                    "name": "Postman-Newman-Framework",
+                    "description": "Framework to manage and run multiple postman collections in a single run along with the allure reports.",
+                    "url": "https://github.com/nareshnavinash/Postman-Newman-Framework",
+                    "stars": 7,
+                    "language": "JavaScript",
+                    "homepage": "https://nareshnavinash.github.io/Postman-Newman-Framework/",
+                    "hasPages": true,
+                    "createdAt": "2020-07-18T13:39:33Z",
+                    "topics": [
+                        "api-automation",
+                        "framework",
+                        "newman",
+                        "postman",
+                        "postman-collection",
+                        "postman-test"
+                    ],
+                    "thumbnail": "https://repository-images.githubusercontent.com/280664062/cd189480-c9c2-11ea-98d0-0a79105a7020"
+                },
+                {
+                    "name": "Selpy-Python",
+                    "description": "Page Object Model Framework for Selenium in pytest, python and allure reporting with snapshot feature",
+                    "url": "https://github.com/nareshnavinash/Selpy-Python",
+                    "stars": 7,
+                    "language": "Python",
+                    "homepage": "https://nareshnavinash.github.io/Selpy-Python/",
+                    "hasPages": true,
+                    "createdAt": "2020-01-17T08:39:04Z",
+                    "topics": [
+                        "framework",
+                        "page-object-framework",
+                        "pytest",
+                        "python",
+                        "selenium",
+                        "snap-mode",
+                        "web-automation"
+                    ],
+                    "thumbnail": "https://repository-images.githubusercontent.com/234506707/b12a7500-3c63-11ea-908a-e274f6d3a7a4"
+                }
+            ],
+            "recent": [
+                {
+                    "name": "tneb-solar",
+                    "description": "TNEB Solar — Net metering bill tracker for Tamil Nadu rooftop solar consumers. Logs import/export meter readings, projects your bimonthly TNEB bill, and warns you before you cross the 500-unit tariff cliff. Offline, no account, Android/iOS/Web. Built with Expo + React Native.",
+                    "url": "https://github.com/nareshnavinash/tneb-solar",
+                    "stars": 0,
+                    "language": "TypeScript",
+                    "homepage": "https://nareshnavinash.github.io/tneb-solar/",
+                    "hasPages": true,
+                    "createdAt": "2026-05-02T07:42:19Z",
+                    "topics": [
+                        "electricity-bill",
+                        "expo",
+                        "mobile-app",
+                        "net-metering",
+                        "offline-first",
+                        "react-native",
+                        "solar",
+                        "tamil-nadu",
+                        "tneb",
+                        "typescript"
+                    ],
+                    "thumbnail": "https://raw.githubusercontent.com/nareshnavinash/tneb-solar/main/assets/logo-mark.svg"
+                },
+                {
+                    "name": "chirp",
+                    "description": "Chirp - Free, cross-platform digital wellness app with smart break reminders, Pomodoro timer, blink & posture nudges, health score, and team dashboard. Zero tracking. MIT licensed.",
+                    "url": "https://github.com/nareshnavinash/chirp",
+                    "stars": 1,
+                    "language": "Dart",
+                    "homepage": "https://nareshnavinash.github.io/chirp/",
+                    "hasPages": true,
+                    "createdAt": "2026-04-10T07:53:27Z",
+                    "topics": [
+                        "20-20-20-rule",
+                        "break-reminder",
+                        "cross-platform",
+                        "desktop-app",
+                        "digital-wellness",
+                        "eye-care",
+                        "flutter",
+                        "health",
+                        "macos",
+                        "open-source",
+                        "pomodoro",
+                        "privacy-first"
+                    ],
+                    "thumbnail": "https://chirpapp.dev/images/og-image.png"
+                },
+                {
+                    "name": "dobbe-mcp",
+                    "description": "AI-powered MCP server + Claude Code skills - scan vulnerabilities, fix dependencies, review PRs, generate tests, triage incidents, track DORA metrics",
+                    "url": "https://github.com/nareshnavinash/dobbe-mcp",
+                    "stars": 0,
+                    "language": "TypeScript",
+                    "homepage": "https://nareshnavinash.github.io/dobbe-mcp/",
+                    "hasPages": true,
+                    "createdAt": "2026-04-09T13:33:55Z",
+                    "topics": [
+                        "automation",
+                        "claude-code",
+                        "devops",
+                        "finite-state-machine",
+                        "mcp",
+                        "npm-package",
+                        "security",
+                        "typescript"
+                    ],
+                    "thumbnail": "https://raw.githubusercontent.com/nareshnavinash/dobbe-mcp/main/docs/banner.svg"
+                },
+                {
+                    "name": "dobbe",
+                    "description": "CLI that runs Claude Code agents to autonomously scan, fix, and verify vulnerable dependencies",
+                    "url": "https://github.com/nareshnavinash/dobbe",
+                    "stars": 0,
+                    "language": "Python",
+                    "homepage": "https://nareshnavinash.github.io/dobbe/",
+                    "hasPages": true,
+                    "createdAt": "2026-03-21T05:54:48Z",
+                    "topics": [
+                        "ai",
+                        "automation",
+                        "claude",
+                        "cli",
+                        "dependabot",
+                        "devsecops",
+                        "python",
+                        "security",
+                        "vulnerability"
+                    ],
+                    "thumbnail": "https://opengraph.githubassets.com/3a51d5e3e9be8cbac1725ecd35c9500b651236c6e92f0f1fe5f4cb30cdc07d70/nareshnavinash/dobbe"
+                },
+                {
+                    "name": "aDictive",
+                    "description": "Free, open-source alternative to Wispr Flow, local-first voice-to-text with whisper.cpp (offline) and optional Groq cloud transcription",
+                    "url": "https://github.com/nareshnavinash/aDictive",
+                    "stars": 0,
+                    "language": "TypeScript",
+                    "homepage": "https://nareshnavinash.github.io/aDictive/",
+                    "hasPages": true,
+                    "createdAt": "2026-03-17T12:14:42Z",
+                    "topics": [
+                        "desktop-app",
+                        "dictation",
+                        "electron",
+                        "groq",
+                        "speech-to-text",
+                        "typescript",
+                        "voice-to-text",
+                        "whisper-cpp"
+                    ],
+                    "thumbnail": "https://nareshnavinash.github.io/aDictive/social-card.png"
+                },
+                {
+                    "name": "GhostEdit",
+                    "description": "Free, open-source AI grammar checker. Fix grammar, spelling, and punctuation in any app with a single hotkey. Privacy-first no accounts, no subscriptions. ",
+                    "url": "https://github.com/nareshnavinash/GhostEdit",
+                    "stars": 6,
+                    "language": "TypeScript",
+                    "homepage": "https://nareshnavinash.github.io/GhostEdit/",
+                    "hasPages": true,
+                    "createdAt": "2026-03-17T09:54:57Z",
+                    "topics": [
+                        "ai-writing-assistant",
+                        "electron-app",
+                        "grammar-checker",
+                        "grammarly-alternative",
+                        "offline-first",
+                        "spell-checker"
+                    ],
+                    "thumbnail": "https://raw.githubusercontent.com/nareshnavinash/GhostEdit/main/assets/AppIcon1024.png"
+                }
+            ]
+        },
+        "publicRepoCount": 41
+    },
+    "blog": {
+        "url": "https://medium.com/@nareshnavinash",
+        "section": "Publications",
+        "points": [
+            "Management In Action: A hands-on guide to effective engineering management.",
+            "Covers team building, decision-making, stakeholder alignment, and leadership.",
+            "Regular contributor on Medium about engineering management and quality.",
+            "Topics include AI in engineering, test automation, and leadership practices."
+        ]
+    },
+    "skills": {
+        "title": "Skills.",
+        "subtitle": "A full-stack quality & engineering toolkit honed over a decade.",
+        "categories": [
+            {
+                "name": "Languages",
+                "items": [
+                    "Python",
+                    "TypeScript",
+                    "Ruby"
+                ]
+            },
+            {
+                "name": "AI Stack",
+                "items": [
+                    "AI Agents (Claude Code workflows)",
+                    "Prompt Engineering",
+                    "LLM Evals & RAG Architecture",
+                    "Anthropic APIs · n8n · Zapier"
+                ]
+            },
+            {
+                "name": "Cloud & Infrastructure",
+                "items": [
+                    "AWS (Solutions Architect)",
+                    "Serverless Architecture",
+                    "Docker & Kubernetes",
+                    "CI/CD (CircleCI, GitLab, GitHub)"
+                ]
+            },
+            {
+                "name": "Quality & Observability",
+                "items": [
+                    "Data Observability (Mixpanel, Holistics, Snowflake)",
+                    "Performance Engineering (k6, Lighthouse)",
+                    "Automation (Playwright, Cypress)",
+                    "Contract Testing (Pact)"
+                ]
+            }
+        ]
+    },
+    "leadership": {
+        "title": "Leadership.",
+        "subtitle": "How I build teams, ship products, and drive impact.",
+        "cards": [
+            {
+                "title": "AI-Augmented Engineering",
+                "description": "Embedding AI tools and workflows into every stage of the SDLC - from code generation and review to intelligent testing and deployment."
+            },
+            {
+                "title": "Team Growth",
+                "description": "Investing in people through mentorship, clear career ladders, and creating psychological safety that empowers engineers to take bold bets."
+            },
+            {
+                "title": "Strategic Planning",
+                "description": "Translating business goals into engineering roadmaps with clear milestones, measurable outcomes, and adaptive execution."
+            },
+            {
+                "title": "Cross-functional Collaboration",
+                "description": "Breaking silos between product, design, and engineering to align on shared outcomes. Building bridges across distributed teams and time zones."
+            },
+            {
+                "title": "Operational Excellence",
+                "description": "Driving reliability through SLOs, incident management, runbooks, and a culture of blameless post-mortems and continuous improvement."
+            },
+            {
+                "title": "Data-Driven Decisions",
+                "description": "Using engineering metrics, user data, and experimentation to prioritize ruthlessly and make confident product and technical decisions."
+            }
+        ]
+    },
+    "publications": {
+        "title": "Publications.",
+        "subtitle": "Sharing knowledge through writing and open source.",
+        "book": {
+            "title": "Management In Action",
+            "author": "Naresh Sekar",
+            "publisher": "Amazon Kindle",
+            "bylineTemplate": "by {author} · Published on {publisher}",
+            "description": "A hands-on guide to effective engineering management - covering team building, decision-making, stakeholder alignment, and leadership practices that drive real impact in fast-paced technology organizations.",
+            "amazonUrl": "https://www.amazon.com/s?i=digital-text&rh=p_27%3ANaresh%2BSekar",
+            "mediumUrl": "https://medium.com/@nareshnavinash"
+        }
+    },
+    "certifications": {
+        "title": "Certifications.",
+        "subtitle": "Continuous learning across engineering, cloud, and leadership.",
+        "items": [
+            {
+                "name": "AWS Solutions Architect Associate",
+                "issuer": "Amazon Web Services"
+            },
+            {
+                "name": "Reforge - Engineering Management",
+                "issuer": "Reforge"
+            },
+            {
+                "name": "CCNA & CCNP Routing and Switching",
+                "issuer": "Cisco Systems"
+            },
+            {
+                "name": "Google Project Management Certificate",
+                "issuer": "Google (Coursera)"
+            },
+            {
+                "name": "Strategic Leadership & Management",
+                "issuer": "University of Illinois (Coursera)"
+            },
+            {
+                "name": "BEC Vantage (Business English)",
+                "issuer": "Cambridge Assessment"
+            }
+        ]
+    },
+    "education": {
+        "title": "Education.",
+        "degree": "Bachelor of Engineering - Electronics & Communication",
+        "school": "Anna University",
+        "period": "2011 - 2015",
+        "location": "Chennai, India"
+    },
+    "contact": {
+        "title": "Let's connect.",
+        "subtitle": "Open to conversations about engineering leadership, AI, and collaboration.",
+        "intro": "Say hello."
+    },
+    "projects": [
+        {
+            "title": "TestGorilla",
+            "titleSmall": [
+                "Test",
+                "Gorilla"
+            ],
+            "url": "https://www.testgorilla.com",
+            "shortRole": [
+                "Engineering Manager",
+                "Lead SDET"
+            ],
+            "images": [
+                "tg-em-ai",
+                "tg-em-devex",
+                "tg-em-lead",
+                "tg-lead-sdet"
+            ]
+        },
+        {
+            "title": "Hopin",
+            "titleSmall": [
+                "Hopin"
+            ],
+            "url": "https://hopin.com",
+            "shortRole": "Senior SDET",
+            "images": [
+                "hopin-1"
+            ]
+        },
+        {
+            "title": "Vue.ai",
+            "titleSmall": [
+                "Vue.ai"
+            ],
+            "url": "https://vue.ai",
+            "shortRole": "Senior SDET",
+            "images": [
+                "vueai-1"
+            ]
+        },
+        {
+            "title": "WeInvest",
+            "titleSmall": [
+                "WeInvest"
+            ],
+            "url": "https://weinvest.net",
+            "shortRole": "Senior SDET",
+            "images": [
+                "weinvest-1"
+            ]
+        },
+        {
+            "title": "Freshworks",
+            "titleSmall": [
+                "Fresh",
+                "works"
+            ],
+            "url": "https://www.freshworks.com",
+            "shortRole": "Software Engineer",
+            "images": [
+                "freshworks-1"
+            ]
+        },
+        {
+            "title": "Cognizant",
+            "titleSmall": [
+                "Cogni",
+                "zant"
+            ],
+            "url": "https://www.cognizant.com",
+            "shortRole": "Programmer Analyst",
+            "images": [
+                "cognizant-1"
+            ]
+        }
+    ]
+}
